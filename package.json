@@ -1,0 +1,19 @@
+{
+  "name": "brian-koscielniak-portfolio",
+  "version": "1.0.0",
+  "description": "Brian Koscielniak's portfolio website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Koscielniak"
+  ],
+  "author": "Brian Koscielniak",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0"
+  }
+}

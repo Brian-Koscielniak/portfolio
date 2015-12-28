@@ -1,0 +1,31 @@
+doctype html
+html(lang='en-us')
+	head
+		block title
+			title Brian Koscienliak, Web Developer
+		block meta
+			meta(type='author' content='Brian Koscielniak')
+		block styles
+			link(rel='stylesheet' type='text/css' href='css/main.css')
+	body
+		block nav
+			nav.main
+				ul
+					li.navItem
+						a(href='projects') info
+					li.navItem
+						a(href='projects') projects
+					li.navItem
+						a(href='projects') contact 
+					li.navItem
+						a(href='projects') blog
+		block content
+			main
+				p Sorry about that, there is nothing at this location. 
+					a(href='/') This link with bring you to site root.
+				p.error ERROR CODE 404 (not found)
+			
+		block foot
+			footer
+				p this is foot
+		block scripts
