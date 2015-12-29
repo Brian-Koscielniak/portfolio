@@ -5,27 +5,36 @@ html(lang='en-us')
 			title Brian Koscienliak, Web Developer
 		block meta
 			meta(type='author' content='Brian Koscielniak')
-		block styles
-			link(rel='stylesheet' type='text/css' href='css/main.css')
+		//block styles
+			//link(rel='stylesheet' type='text/css' href='css/main.css')
 	body
 		block nav
 			nav.main
 				ul
 					li.navItem
-						a(href='projects') info
+						a(href='info') info
 					li.navItem
 						a(href='projects') projects
 					li.navItem
-						a(href='projects') contact 
+						a(href='contact') contact 
 					li.navItem
-						a(href='projects') blog
-		block content
-			main
+						a(href='blog') blog
+		main
+			block content
 				p Sorry about that, there is nothing at this location. 
 					a(href='/') This link with bring you to site root.
 				p.error ERROR CODE 404 (not found)
 			
 		block foot
 			footer
-				p this is foot
+				div.logo
+					img(src='assets/logo03.svg')
+				div.slogan
+					p How are you doing? I am fine. What is your name? My name is Jerry.
+				div.social
+					a.social
+						img(src='http://lorempixel.com/g/25/25' alt='social link')
+						img(src='http://lorempixel.com/g/25/25' alt='social link')
+						img(src='http://lorempixel.com/g/25/25' alt='social link')
+						img(src='http://lorempixel.com/g/25/25' alt='social link')
 		block scripts
