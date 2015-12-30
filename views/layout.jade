@@ -5,12 +5,18 @@ html(lang='en-us')
 			title Brian Koscienliak, Web Developer
 		block meta
 			meta(type='author' content='Brian Koscielniak')
-		//block styles
-			//link(rel='stylesheet' type='text/css' href='css/main.css')
+		block styles
+			link(rel='stylesheet' type='text/css' href='assets/font-awesome-4.5.0/css/font-awesome.min.css')
+			link(rel='stylesheet' type='text/css' href='css/font-awesome-customize.css')
+			link(rel='stylesheet' type='text/css' href='css/main.css')
 	body
 		block nav
+			mav#full.navReady
+				p full nav here!
 			nav.main
 				ul
+					li.TEMP
+						i#navToggler(class='fa fa-bars')
 					li.navItem
 						a(href='info') info
 					li.navItem
@@ -28,7 +34,7 @@ html(lang='en-us')
 		block foot
 			footer
 				div.logo
-					img(src='assets/logo03.svg')
+					img(src='assets/logo03-fill-white.svg')
 				div.slogan
 					p How are you doing? I am fine. What is your name? My name is Jerry.
 				div.social
@@ -38,3 +44,4 @@ html(lang='en-us')
 						img(src='http://lorempixel.com/g/25/25' alt='social link')
 						img(src='http://lorempixel.com/g/25/25' alt='social link')
 		block scripts
+			script(type='text/javascript' src='js/main.js')
