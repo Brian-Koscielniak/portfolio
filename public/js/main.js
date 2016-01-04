@@ -1,17 +1,17 @@
 /* nav scripts */
 var navToggler = document.getElementById('navToggler');
-navToggler.addEventListener('click', toggle_fullNav, false);
+navToggler.addEventListener('click', toggle_dropNav, false);
 
-function toggle_fullNav(){
-	var fullNav = document.getElementById('full');
+function toggle_dropNav(){
+	var dropNav = document.getElementById('dropNav');
 	var mainNavLinks = document.querySelectorAll('.main .navItem');
-	if(fullNav.getAttribute('class') != 'open'){
-		fullNav.setAttribute('class', 'open');
+	if(dropNav.getAttribute('class') != 'open'){
+		dropNav.setAttribute('class', 'open');
 		for(var i = 0; i < mainNavLinks.length; i++){
 			mainNavLinks[i].style.display = 'none';
 		}
 	} else {
-		fullNav.setAttribute('class', 'closed');
+		dropNav.setAttribute('class', 'closed');
 		for(var i = 0; i < mainNavLinks.length; i++){
 			mainNavLinks[i].style.display = 'flex'
 		}

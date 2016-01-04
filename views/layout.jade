@@ -7,15 +7,16 @@ html(lang='en-us')
 			meta(type='author' content='Brian Koscielniak')
 		block styles
 			link(rel='stylesheet' type='text/css' href='assets/font-awesome-4.5.0/css/font-awesome.min.css')
-			link(rel='stylesheet' type='text/css' href='css/font-awesome-customize.css')
+			link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css')
 			link(rel='stylesheet' type='text/css' href='css/main.css')
+		block unique
 	body
 		block nav
-			mav#full.navReady
+			mav#dropNav.navReady
 				p full nav here!
-			nav.main
+			nav#mainNav
 				ul
-					li.TEMP
+					li.toggleBars
 						i#navToggler(class='fa fa-bars')
 					li.navItem
 						a(href='info') info
