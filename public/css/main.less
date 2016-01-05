@@ -52,13 +52,14 @@
 	* {
 		padding: 0;
 		margin: 0;
+		border: none;
 		font-size: 100%;
 		font-weight: normal;
 		font-family: 'Open Sans', sans-serif;
 		line-height: 150%;
 	}
 
-/* Setting global styling */
+/* Setting global Constant styling */
 	/* text */
 	h1 {
 		font-size: 160%;
@@ -78,12 +79,14 @@
 	/* content */
 	body {
 		background: @techWhite;
+		min-height: 500px;
+		margin-bottom: 300px;
 	}
 	main {
 		background: @techWhite;
 	}
 	a {
-		color: @techOrange;
+		color: darken(@techOrange, 10%);
 	}
 
 	/* dropNav */
@@ -132,8 +135,7 @@
 		.colFlex;
 	}
 	main {
-		flex: 2;
-		padding: 0 2px;
+		padding: 2px;
 	}
 	
 	/* dropNav */
@@ -155,14 +157,16 @@
 				a {
 					flex: 1;
 					color: @techWhite;
+					font-size: 1.25em;
 					font-weight: bold;
-					background: lighten(@techGrey, 10%);
+					background: @techGrey;
 					outline: @techDark solid 1px;
-					line-height: 5em; /* sizes the nav */
+					line-height: 4em; /* sizes the nav */
 					text-decoration: none;	
 					&:hover {
-						color: @techOrange;
-						background: lighten(@techGrey, 30%);
+						color: @techDark;
+						text-shadow: 0 0 2px @techWhite;
+						background: lighten(@techGrey, 20%);
 					}
 				}
 			}
@@ -184,12 +188,10 @@
 		.colFlex;
 	}
 	main {
-		padding: 0 5% 5em;
-		flex: 10 0 70em; /* TODO edit */
-		margin-bottom: 500px;
+		padding: 10%;
 	}
 
-	/* full nav */
+	/* drop nav */
 	#navToggler {
 		margin-left: 0;
 	}
@@ -228,11 +230,10 @@
 		.colFlex;
 	}
 	main {
-		padding: 0 10% 5em;
-		margin-bottom: 500px;
+		padding: 20%;
 	}
 	
-	/* full navigation */
+	/* drop nav */
 	.toggleBars {
 		order: 1;
 	}

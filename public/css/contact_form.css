@@ -1,0 +1,373 @@
+/* Adjusting defaults */
+fieldset {
+  border: none;
+}
+/* LESS variables, mixins, etc */
+/* colors */
+/* High Tech theme by jedis @ color.adobe.com */
+/* mixins */
+.fieldText {
+  font-size: 1.25em;
+}
+/* Constant styles */
+/* Contact info styling */
+#businessCard a {
+  display: block;
+  padding-left: 1em;
+  color: black;
+}
+#businessCard a:hover {
+  font-weight: bold;
+}
+#businessCard div {
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+#businessCard #links {
+  border: none;
+}
+/* Small screen */
+@media screen and (max-width: 30em) {
+  /* positioning */
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  #contactForm {
+    margin-bottom: 10em;
+    order: 1;
+  }
+  #contactBody li {
+    margin: .5em 0;
+    display: flex;
+    flex-direction: column;
+  }
+  #contactBody label {
+    align-self: flex-start;
+  }
+  #contactBody input[type=submit] {
+    align-self: flex-start;
+    min-width: 100px;
+  }
+  /* style */
+  #contactForm {
+    background: #f2f4f4;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 100%;
+  }
+  #contactBody label {
+    background: #FF972C;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 100%;
+    color: #FEFFFB;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px grey;
+    border-bottom: none;
+  }
+  #contactBody textarea {
+    background: #FEFFFB;
+    border-radius: 0 0 5px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 100%;
+    font-size: 1.25em;
+    height: 8em;
+  }
+  #contactBody input {
+    background: #FEFFFB;
+    border-radius: 0 0 5px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 100%;
+    font-size: 1.25em;
+  }
+  #contactBody input[type=submit] {
+    background: #FF972C;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 30%;
+    color: #FEFFFB;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px grey;
+  }
+  #contactBody input[type=submit][type=submit]:hover {
+    background: #ffbd79;
+    cursor: pointer;
+  }
+  /* contact info styling */
+  #businessCard {
+    background: #f2f4f4;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
+/* Medium Screen */
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  /* positioning */
+  main {
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #contactForm {
+    margin-bottom: 3em;
+    order: 1;
+  }
+  #contactBody li {
+    margin: .5em 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  #contactBody label {
+    align-self: flex-start;
+  }
+  #contactBody input[type=submit] {
+    align-self: flex-start;
+  }
+  /* style */
+  #contactForm {
+    background: #f2f4f4;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 100%;
+  }
+  #contactBody label {
+    background: #FF972C;
+    border-radius: 5px 0 0 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 30%;
+    color: #FEFFFB;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px grey;
+  }
+  #contactBody textarea {
+    background: #FEFFFB;
+    border-radius: 0 5px 5px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 70%;
+    font-size: 1.25em;
+    height: 8em;
+  }
+  #contactBody input {
+    background: #FEFFFB;
+    border-radius: 0 5px 5px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 70%;
+    font-size: 1.25em;
+  }
+  #contactBody input[type=submit] {
+    background: #FF972C;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 20%;
+    color: #FEFFFB;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px grey;
+  }
+  #contactBody input[type=submit][type=submit]:hover {
+    background: #ffbd79;
+    cursor: pointer;
+  }
+  /* contact info styling */
+  #businessCard {
+    background: #f2f4f4;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
+/* Large Screen */
+@media screen and (min-width: 60em) {
+  /* positioning */
+  main {
+    margin: 5em 0;
+    display: flex;
+    justify-content: center;
+  }
+  #contactForm {
+    margin-bottom: 5em;
+  }
+  #contactBody li {
+    margin: .5em 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  #contactBody label {
+    align-self: flex-start;
+  }
+  #contactBody input[type=submit] {
+    align-self: flex-start;
+  }
+  /* style */
+  #contactForm {
+    background: #f2f4f4;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 70%;
+  }
+  #contactBody label {
+    background: #FF972C;
+    border-radius: 5px 0 0 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 30%;
+    color: #FEFFFB;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px grey;
+  }
+  #contactBody textarea {
+    background: #FEFFFB;
+    border-radius: 0 5px 5px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 70%;
+    font-size: 1.25em;
+    height: 8em;
+  }
+  #contactBody input {
+    background: #FEFFFB;
+    border-radius: 0 5px 5px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 70%;
+    font-size: 1.25em;
+  }
+  #contactBody input[type=submit] {
+    background: #FF972C;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 20%;
+    color: #FEFFFB;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px grey;
+  }
+  #contactBody input[type=submit][type=submit]:hover {
+    background: #ffbd79;
+    cursor: pointer;
+  }
+  /* contact info styling */
+  #businessCard {
+    background: #f2f4f4;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-right: none;
+    box-shadow: 2px 2px 4px #999;
+    box-sizing: border-box;
+    padding: .5em;
+    width: 30%;
+    margin-left: 1em;
+    margin-bottom: 5em;
+  }
+}

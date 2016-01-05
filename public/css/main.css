@@ -36,12 +36,13 @@
 * {
   padding: 0;
   margin: 0;
+  border: none;
   font-size: 100%;
   font-weight: normal;
   font-family: 'Open Sans', sans-serif;
   line-height: 150%;
 }
-/* Setting global styling */
+/* Setting global Constant styling */
 /* text */
 h1 {
   font-size: 160%;
@@ -60,12 +61,14 @@ p {
 /* content */
 body {
   background: #FEFFFB;
+  min-height: 500px;
+  margin-bottom: 300px;
 }
 main {
   background: #FEFFFB;
 }
 a {
-  color: #FF972C;
+  color: #f87e00;
 }
 /* dropNav */
 #dropNav {
@@ -120,8 +123,7 @@ footer {
     flex-direction: column;
   }
   main {
-    flex: 2;
-    padding: 0 2px;
+    padding: 2px;
   }
   /* dropNav */
   #dropNav {
@@ -145,16 +147,18 @@ footer {
   #mainNav ul li a {
     flex: 1;
     color: #FEFFFB;
+    font-size: 1.25em;
     font-weight: bold;
-    background: #a0adad;
+    background: #849696;
     outline: #232D33 solid 1px;
-    line-height: 5em;
+    line-height: 4em;
     /* sizes the nav */
     text-decoration: none;
   }
   #mainNav ul li a:hover {
-    color: #FF972C;
-    background: #d7dcdc;
+    color: #232D33;
+    text-shadow: 0 0 2px #FEFFFB;
+    background: #bbc5c5;
   }
   /* footer */
   footer {
@@ -171,12 +175,9 @@ footer {
     flex-direction: column;
   }
   main {
-    padding: 0 5% 5em;
-    flex: 10 0 70em;
-    /* TODO edit */
-    margin-bottom: 500px;
+    padding: 10%;
   }
-  /* full nav */
+  /* drop nav */
   #navToggler {
     margin-left: 0;
   }
@@ -211,10 +212,9 @@ footer {
     flex-direction: column;
   }
   main {
-    padding: 0 10% 5em;
-    margin-bottom: 500px;
+    padding: 20%;
   }
-  /* full navigation */
+  /* drop nav */
   .toggleBars {
     order: 1;
   }

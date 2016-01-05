@@ -1,0 +1,244 @@
+/* Adjusting defaults */
+fieldset {
+	border: none;
+}
+
+/* LESS variables, mixins, etc */
+	/* colors */
+		/* High Tech theme by jedis @ color.adobe.com */
+		@techGrey: #849696;
+		@techWhite: #FEFFFB;
+		@techDark: #232D33;
+		@techGreen: #17384C;
+		@techOrange: #FF972C;
+
+	/* mixins */
+	.box-n-border(@boxWidth: 50%, @radius: 5px, @boxColor: @techOrange){
+		background: @boxColor;
+		border-radius: @radius;
+		border-bottom: 1px solid hsla(0, 0%, 0%, .25);
+		border-top: 1px solid hsla(0, 0%, 100%, .25);
+		border-left: none;
+		border-right: none;
+		box-shadow: 2px 2px 4px #999;
+		box-sizing: border-box;
+		padding: .5em;
+		width: @boxWidth;
+	}
+	.labelText(@labelColor: @techWhite;){
+		color: @labelColor;
+		font-size: 1.25em;
+		font-weight: bold;
+		text-shadow: 2px 2px 4px grey;
+	}
+	.fieldText{
+		font-size: 1.25em;
+	}
+
+
+/* Constant styles */
+	/* Contact info styling */
+	#businessCard {
+		a {
+			display: block;
+			padding-left: 1em;
+			color: black;
+			&:hover {
+				font-weight: bold;
+			}
+		}
+		div {
+			margin-bottom: .5em;
+			padding-bottom: .5em;
+			border-bottom: 1px solid hsla(0, 0%, 0%, .5);
+		}
+		#links {
+			border: none;
+		}
+	}
+
+/* Small screen */
+@media screen and (max-width: 30em) {
+	/* positioning */
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+	#contactForm {
+		margin-bottom: 10em;
+		order: 1;
+	}
+	#contactBody {
+		li {
+			margin: .5em 0;
+			display: flex;
+			flex-direction: column;
+		}
+		label {
+			align-self: flex-start;
+		}
+		input[type=submit] {
+			align-self: flex-start;
+			min-width: 100px;
+		}
+	}
+
+	/* style */
+	#contactForm {
+		.box-n-border(100%, 5px, lighten(@techGrey, 40%));
+	}
+
+	#contactBody {
+		label {
+			.box-n-border(100%, 5px 5px 0 0);
+			.labelText;
+			border-bottom: none;
+		}
+		textarea {
+			.box-n-border(100%, 0 0 5px 5px, @techWhite);
+			.fieldText;
+			height: 8em;
+		}
+		input {
+			.box-n-border(100%, 0 0 5px 5px, @techWhite);
+			.fieldText;
+		}
+		input[type=submit] {
+			.box-n-border(30%, 5px);
+			.labelText;
+			&[type=submit]:hover {
+				background: lighten(@techOrange, 15%);
+				cursor: pointer;
+			}
+		}
+	}
+
+	/* contact info styling */
+	#businessCard {
+		.box-n-border(100%, 5px, lighten(@techGrey, 40%));
+		margin-bottom: 1em;
+	}
+}
+
+/* Medium Screen */
+@media screen and (min-width: 30em) and (max-width: 60em){
+	/* positioning */
+	main {
+		margin-top: 3em;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	#contactForm {
+		margin-bottom: 3em;
+		order: 1;
+	}
+	#contactBody {
+		li {
+			margin: .5em 0;
+			display: flex;
+			justify-content: flex-end;
+		}
+		label {
+			align-self: flex-start;
+		}
+		input[type=submit] {
+			align-self: flex-start;
+		}
+	}
+
+	/* style */
+	#contactForm {
+		.box-n-border(100%, 5px, lighten(@techGrey, 40%));
+	}
+	#contactBody {
+		label {
+			.box-n-border(30%, 5px 0 0 5px);
+			.labelText;
+		}
+		textarea {
+			.box-n-border(70%, 0 5px 5px 0, @techWhite);
+			.fieldText;
+			height: 8em;
+		}
+		input {
+			.box-n-border(70%, 0 5px 5px 0, @techWhite);
+			.fieldText;
+		}
+		input[type=submit] {
+			.box-n-border(20%, 5px);
+			.labelText;
+			&[type=submit]:hover {
+				background: lighten(@techOrange, 15%);
+				cursor: pointer;
+			}
+		}
+	}
+
+	/* contact info styling */
+	#businessCard {
+		.box-n-border(100%, 5px, lighten(@techGrey, 40%));
+		margin-bottom: 1em;
+	}
+}
+
+/* Large Screen */
+@media screen and (min-width: 60em) {
+	/* positioning */
+	main {
+		margin: 5em 0;
+		display: flex;
+		justify-content: center;
+	}
+	#contactForm {
+		margin-bottom: 5em;
+	}
+	#contactBody {
+		li {
+			margin: .5em 0;
+			display: flex;
+			justify-content: flex-end;
+		}
+		label {
+			align-self: flex-start;
+		}
+		input[type=submit] {
+			align-self: flex-start;
+		}
+	}
+
+	/* style */
+	#contactForm {
+		.box-n-border(70%, 5px, lighten(@techGrey, 40%));
+	}
+	#contactBody {
+		label {
+			.box-n-border(30%, 5px 0 0 5px);
+			.labelText;
+		}
+		textarea {
+			.box-n-border(70%, 0 5px 5px 0, @techWhite);
+			.fieldText;
+			height: 8em;
+		}
+		input {
+			.box-n-border(70%, 0 5px 5px 0, @techWhite);
+			.fieldText;
+		}
+		input[type=submit] {
+			.box-n-border(20%, 5px);
+			.labelText;
+			&[type=submit]:hover {
+				background: lighten(@techOrange, 15%);
+				cursor: pointer;
+			}
+		}
+	}
+
+	/* contact info styling */
+	#businessCard {
+		.box-n-border(30%, 5px, lighten(@techGrey, 40%));
+		margin-left: 1em;
+		margin-bottom: 5em;
+	}
+}
