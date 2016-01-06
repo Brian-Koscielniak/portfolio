@@ -27,6 +27,10 @@ fieldset {
 #businessCard #links {
   border: none;
 }
+/* details */
+#contactBody label span {
+  margin-left: 1em;
+}
 /* Small screen */
 @media screen and (max-width: 30em) {
   /* positioning */
@@ -261,7 +265,7 @@ fieldset {
 @media screen and (min-width: 60em) {
   /* positioning */
   main {
-    margin: 5em 0;
+    margin: 5em 0 0 0;
     display: flex;
     justify-content: center;
   }

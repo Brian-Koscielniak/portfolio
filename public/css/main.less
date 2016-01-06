@@ -80,7 +80,6 @@
 	body {
 		background: @techWhite;
 		min-height: 500px;
-		margin-bottom: 300px;
 	}
 	main {
 		background: @techWhite;
@@ -120,19 +119,49 @@
 
 	/* footer */
 	footer {
+		.colFlex;
+		justify-content: center;
 		text-align: center;
-		font-size: 3em;
-		height: 500px;
+		align-items: center;
 		width: 100%;
 		background: @techGreen;
 		color: @techWhite;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: -2;
+		.social a {
+			border-radius: 4em;
+			background: darken(@techGreen, 5%);
+		}
+		a {
+			width: 1em;
+			margin: .5em;
+			font-size: 1.5em;
+			text-decoration: none;
+			padding: .75em;
+			color: @techWhite;
+			&:hover {
+				color: @techOrange;
+			}
+		}
+		p {
+			max-width: 600px;
+		}
 	}	
+	/* details */
+	.tagline {
+		span {
+			color: lighten(@techGrey, 10%);
+		}
+	}
 
 /* small screen specific */
 @media screen and (max-width: 30em){
 	/* content */
 	body {
 		.colFlex;
+		margin-bottom: 300px;
 	}
 	main {
 		padding: 2px;
@@ -175,9 +204,8 @@
 
 	/* footer */
 	footer {
-		font-size: 2em;
-		flex: 1;
 		order: 1;
+		min-height: 300px;
 	}
 }
 
@@ -186,6 +214,7 @@
 	/* content */
 	body {
 		.colFlex;
+		margin-bottom: 300px;
 	}
 	main {
 		padding: 10%;
@@ -221,6 +250,10 @@
 			}
 		}
 	}
+	/* footer */
+	footer {
+		height: 300px;
+	}
 }
 
 /* larger screen size specific */
@@ -228,6 +261,7 @@
 	/* content */
 	body {
 		.colFlex;
+		margin-bottom: 400px;
 	}
 	main {
 		padding: 20%;
@@ -268,14 +302,7 @@
 	}
 	/* footer */
 	footer {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		z-index: -2;
-		.logo img {
-			width: 15%;
-			height: 15%;
-		}
+		height: 400px;
 	}
 }
 

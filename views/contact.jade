@@ -12,12 +12,15 @@ block content
 			ul
 				li
 					label(for='name') name
+						span(class='fa fa-user')
 					input.contact(type='text' name='name' placeholder='Your Name' autofocus)
 				li
 					label(for='email') email
+						span(class='fa fa-envelope')
 					input.contact(type='email' name='email' placeholder='you@emailprovider.com' required)
 				li
-					label(for='message') message 
+					label(for='message') message
+						span(class='fa fa-comment')
 					textarea.contact(name='message' placeholder="Let's work together!" required)
 				li
 					input.contact(type='submit' name='submit' value='send')

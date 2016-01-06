@@ -35,14 +35,16 @@ html(lang='en-us')
 		block foot
 			footer
 				div.logo
-					img(src='assets/logo03-fill-white.svg')
-				div.slogan
-					p How are you doing? I am fine. What is your name? My name is Jerry.
+					a(href='/')
+						img(src='assets/logo03-fill-white.svg')
+				div.tagline
+					p 
+						span In a phrase tell them what you do: 
+						| I build custom applications, with usability, responsiveness, and performance in mind. 
 				div.social
-					a.social
-						img(src='http://lorempixel.com/g/25/25' alt='social link')
-						img(src='http://lorempixel.com/g/25/25' alt='social link')
-						img(src='http://lorempixel.com/g/25/25' alt='social link')
-						img(src='http://lorempixel.com/g/25/25' alt='social link')
+					a(class='fa fa-envelope-o' title='email Brian Koscielniak' target='_self' href='mailto:0000000000000000@gamil.com')
+					a(class='fa fa-github-alt' title='Brian Koscielniak at GitHub' href='#')
+					a(class='fa fa-linkedin-square' title='Brian Koscielniak at Linkedin' href='#')
+					a(class='fa fa-google-plus' title='Brian Koscielniak at Google+' href='#')
 		block scripts
 			script(type='text/javascript' src='js/main.js')
