@@ -9,4 +9,7 @@ module.exports = function(app){
 	app.get('/contact', function(req, res){controller.contact(req, res)});
 	app.get('/blog', function(req, res){controller.blog(req, res)});
 	app.get('*', function(req, res){controller.notFound(req, res)});
+
+	/* POSTs */
+	app.post('/contact', function(req, res){controller.contactPost(req, res)});
 }

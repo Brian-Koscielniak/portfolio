@@ -9,7 +9,7 @@ html(lang='en-us')
 			link(rel='stylesheet' type='text/css' href='assets/font-awesome-4.5.0/css/font-awesome.min.css')
 			link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css')
 			link(rel='stylesheet' type='text/css' href='css/main.css')
-		block unique
+		block uniqueStyles
 	body
 		block nav
 			mav#dropNav.navReady
@@ -47,4 +47,6 @@ html(lang='en-us')
 					a(class='fa fa-linkedin-square' title='Brian Koscielniak at Linkedin' href='#')
 					a(class='fa fa-google-plus' title='Brian Koscielniak at Google+' href='#')
 		block scripts
+			script(type='text/javascript' src='js/Ajax.js')
 			script(type='text/javascript' src='js/main.js')
+		block uniqueScripts

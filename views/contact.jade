@@ -1,29 +1,29 @@
 extends ./layout.jade
 
-block unique
+block uniqueStyles
 	link(rel='stylesheet' type='text/css' href='css/contact_form.css')
 
 block content
-	form#contactForm.contact
+	form#contactForm.contact(action='/contact' method='post')
 		fieldset#contactHeader.contact
 			h1 Contact Form
 			p Please feel free to send me any questions, comments, or feedback. I would love to hear from you.
-		fieldset#contactBody.contact
+		fieldset#contactBody
 			ul
 				li
 					label(for='name') name
 						span(class='fa fa-user')
-					input.contact(type='text' name='name' placeholder='Your Name' autofocus)
+					input.userInfo(type='text' name='name' placeholder='Your Name' autofocus)
 				li
 					label(for='email') email
 						span(class='fa fa-envelope')
-					input.contact(type='email' name='email' placeholder='you@emailprovider.com' required)
+					input.userInfo(type='email' name='email' placeholder='you@emailprovider.com' required)
 				li
 					label(for='message') message
 						span(class='fa fa-comment')
-					textarea.contact(name='message' placeholder="Let's work together!" required)
+					textarea.userInfo(name='message' placeholder="Let's work together!" required)
 				li
-					input.contact(type='submit' name='submit' value='send')
+					input(type='submit' name='submit' value='send')
 	section#businessCard
 		// GIVE OUT NO PHONE NUMBER. upon request only.
 		div#contactInfo
@@ -41,3 +41,5 @@ block content
 			a(href='businessCard') Card
 			// NO PHONE NUMBER 
 			// assets/Brian_Koscielniak-Web_Developer-Card
+block uniqueScripts
+	script(type='text/javascript' src='js/contact.js')

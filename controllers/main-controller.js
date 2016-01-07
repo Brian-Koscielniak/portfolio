@@ -1,3 +1,4 @@
+/* render pages */
 exports.home = function(req, res){
 	res.render("index.jade");
 }
@@ -15,4 +16,10 @@ exports.blog = function(req, res){
 }
 exports.notFound = function(req, res){
 	res.render("layout.jade");
+}
+
+/* POSTs */
+exports.contactPost = function(req, res){
+	console.log(req.body.data);
+	res.send('Message received');
 }

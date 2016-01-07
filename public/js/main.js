@@ -29,6 +29,6 @@ function toggle_dropNav(){
 		setTimeout(function(){
 			// This is in a setTimeout so that the 'closed' class animation still have enough time.
 			dropNav.setAttribute('class', 'navReady');
-		}, 1000);
+		}, 500);
 	}
 }
