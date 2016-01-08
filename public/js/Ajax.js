@@ -28,7 +28,7 @@ Ajax.sendRequest = function(url, callback, postData, file) {
 	//if everything returns ok send req value to "callback"
 	req.onreadystatechange = function () {
 		if (req.readyState !== 4) return;
-		if (req.status !== 200 && req.status !== 304) {
+		if (req.status !== 200 && req.status !== 304 && !(req.status <= 500)) {
 			return;
 		}
 		callback(req);

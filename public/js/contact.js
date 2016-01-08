@@ -23,7 +23,7 @@ function handleSubmit(e){
 
 	// Make userInput into JSON
 	userInput = {
-		date: getDateTime(),
+		id: new Date() +  Math.random().toString(36).substr(2, 12),
 		name: userInput[0].value,
 		email: userInput[1].value,
 		message: userInput[2].value
@@ -35,31 +35,32 @@ function handleSubmit(e){
 }
 
 function handleResponse(res){
-	// Clear out the inputs. 
-	var userInput = document.querySelectorAll('#contactBody .userInfo')
-	for(i=0;i<userInput.length;i++){
-		userInput[i].value = "";
+	if (res.responseText !== '200'){
+		make_infoBox(true);
+	} else {
+		// Clear out the inputs on success.
+/*
+		var userInput = document.querySelectorAll('#contactBody .userInfo')
+		for(i=0;i<userInput.length;i++){
+			userInput[i].value = "";
+		}
+*/
+		make_infoBox();
 	}
-
-	// TODO build a proper UI message
-	alert(res.responseText)
 }
 
+function make_infoBox(err){
+	var infoBox = document.createElement('div');
+	if (err){
+		infoBox.appendChild(document.createTextNode('Something when wrong, message not recieved'));
+		infoBox.setAttribute('class', 'infoBox infoError');
+	} else {
+		infoBox.appendChild(document.createTextNode('Message has been recieved'));
+		infoBox.setAttribute('class', 'infoBox');
+	}
+	document.body.appendChild(infoBox);
 
-///////////////////////////////////////////////////////////////////////////////
-// Utility Functions //////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-function getDateTime(){
-// Build a human friendly date from the javascript Date object
-	var d = "";
-	var date = new Date();
-	var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
-	var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-	d = days[date.getDay()] + " ";
-	d += months[date.getMonth()] + " "; 
-	d += date.getDate() + " "; 
-	d += date.getFullYear() + " "; 
-	d += date.getHours() + ":";
-	d += date.getMinutes();
-	return d;
+	setTimeout(function(){
+		document.body.removeChild(document.querySelector('.infoBox'));
+	}, 5000);
 }
