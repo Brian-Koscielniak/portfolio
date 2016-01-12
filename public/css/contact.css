@@ -31,6 +31,9 @@ fieldset {
 #contactBody label span {
   margin-left: 1em;
 }
+#contactBody textarea {
+  resize: vertical;
+}
 /* Small screen */
 @media screen and (max-width: 30em) {
   /* positioning */
