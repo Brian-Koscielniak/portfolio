@@ -1,13 +1,16 @@
-/* Adjusting defaults */
-fieldset {
-  border: none;
-}
+/* TABLE OF CONTENTS ==================
+
+==================================== */
 /* LESS variables, mixins, etc */
 /* colors */
 /* High Tech theme by jedis @ color.adobe.com */
 /* mixins */
 .fieldText {
   font-size: 1.25em;
+}
+/* Adjusting defaults */
+fieldset {
+  border: none;
 }
 /* Constant styles */
 /* Contact info styling */
@@ -380,14 +383,59 @@ fieldset {
 }
 /* infoBox Styles */
 .infoBox {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  padding: 6%;
-  margin: 200px 20%;
-  width: 48%;
-  background: lime;
+  width: 100%;
+  height: 100%;
+  background: rgba(77, 77, 77, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.infoError {
-  background: red;
+.infoBox p {
+  background: #FF972C;
+  border-radius: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: none;
+  border-right: none;
+  box-shadow: 2px 2px 4px #999;
+  box-sizing: border-box;
+  padding: .5em;
+  width: 50%;
+  padding: 1em;
+  min-width: 300px;
+  box-shadow: 2px 2px 4px #555;
+  background: #f8ffe2;
+}
+.infoBox p span {
+  font-size: 1.5em;
+  padding: .2em;
+}
+.infoBox input[type=button] {
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  float: right;
+  background: #a3f5a3;
+  border-radius: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: none;
+  border-right: none;
+  box-shadow: 2px 2px 4px #999;
+  box-sizing: border-box;
+  padding: .5em;
+  width: 5%;
+  min-width: 4em;
+}
+.infoBox .fa-check {
+  color: green;
+}
+.infoBox .fa-close {
+  color: red;
+}
+.infoError input[type=button] {
+  background: #f5a3a3;
 }

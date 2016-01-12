@@ -23,7 +23,7 @@ function handleSubmit(e){
 
 	// Make userInput into JSON
 	userInput = {
-		id: new Date() +  Math.random().toString(36).substr(2, 12),
+		id: new Date() + Math.random().toString(36).substr(2, 12),
 		name: userInput[0].value,
 		email: userInput[1].value,
 		message: userInput[2].value
@@ -39,28 +39,58 @@ function handleResponse(res){
 		make_infoBox(true);
 	} else {
 		// Clear out the inputs on success.
-/*
 		var userInput = document.querySelectorAll('#contactBody .userInfo')
 		for(i=0;i<userInput.length;i++){
 			userInput[i].value = "";
 		}
-*/
 		make_infoBox();
 	}
 }
 
 function make_infoBox(err){
+/* This function will create a display on the UI notifying whether or not the POST was successful */
+	clearTimeout(clear_infoBox); 
+
+	// Set up DOM elements
 	var infoBox = document.createElement('div');
+	var msg = document.createElement('p');
+	var icon = document.createElement('span');
+	var okBtn = document.createElement('input');
+	okBtn.setAttribute('type', 'button');
+	okBtn.setAttribute('class', 'okBtn');
+	okBtn.setAttribute('value', 'ok');
+
 	if (err){
-		infoBox.appendChild(document.createTextNode('Something when wrong, message not recieved'));
+		// if err is passed on function call
+		icon.setAttribute('class', 'fa fa-close');
+		msg.appendChild(icon);
+		msg.appendChild(document.createTextNode('There was an error and the message was not recieved. Please try again in a few minutes.'));
 		infoBox.setAttribute('class', 'infoBox infoError');
 	} else {
-		infoBox.appendChild(document.createTextNode('Message has been recieved'));
+		// Success
+		icon.setAttribute('class', 'fa fa-check');
+		msg.appendChild(icon);
+		msg.appendChild(document.createTextNode('Success, the message has been recieved. Thank you for your feedback!'));
 		infoBox.setAttribute('class', 'infoBox');
 	}
-	document.body.appendChild(infoBox);
 
-	setTimeout(function(){
+	// Append and add functionality
+	msg.appendChild(okBtn);
+	infoBox.appendChild(msg);
+	infoBox.addEventListener('click', function(){
+		document.body.removeChild(document.querySelector('.infoBox'))
+		clearTimeout(clear_infoBox);
+	}, false);
+	document.body.appendChild(infoBox);
+	okBtn.focus();
+
+	var clear_infoBox = setTimeout(function(){
 		document.body.removeChild(document.querySelector('.infoBox'));
-	}, 5000);
+	}, 20000);
 }
+
+/*/////////////////
+// TODO: strange email values break the server. The value "1@1.1" gives: http Error: Can't set headers after they are sent.
+	- validate
+	- regex	
+*/
