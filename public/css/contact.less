@@ -62,8 +62,13 @@ fieldset {
 
 	/* details */
 	#contactBody {
+		label {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			min-width: 7em;
+		}
 		label span {
-			margin-left: 1em;
 		}
 		textarea {
 			resize: vertical;
@@ -141,8 +146,10 @@ fieldset {
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
+		overflow: hidden;
 	}
 	#contactForm {
+		min-width: 450px;
 		margin-bottom: 3em;
 		order: 1;
 	}
@@ -163,6 +170,7 @@ fieldset {
 	/* style */
 	#contactForm {
 		.box-n-border(100%, 5px, lighten(@techGrey, 40%));
+		
 	}
 	#contactBody {
 		label {
@@ -192,6 +200,7 @@ fieldset {
 	#businessCard {
 		.box-n-border(100%, 5px, lighten(@techGrey, 40%));
 		margin-bottom: 1em;
+		min-width: 450px;
 	}
 }
 
@@ -205,6 +214,7 @@ fieldset {
 	}
 	#contactForm {
 		margin-bottom: 5em;
+		min-width: 600px;
 	}
 	#contactBody {
 		li {

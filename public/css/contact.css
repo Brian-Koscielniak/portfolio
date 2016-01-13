@@ -31,8 +31,11 @@ fieldset {
   border: none;
 }
 /* details */
-#contactBody label span {
-  margin-left: 1em;
+#contactBody label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 7em;
 }
 #contactBody textarea {
   resize: vertical;
@@ -160,8 +163,10 @@ fieldset {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
   }
   #contactForm {
+    min-width: 450px;
     margin-bottom: 3em;
     order: 1;
   }
@@ -265,6 +270,7 @@ fieldset {
     padding: .5em;
     width: 100%;
     margin-bottom: 1em;
+    min-width: 450px;
   }
 }
 /* Large Screen */
@@ -277,6 +283,7 @@ fieldset {
   }
   #contactForm {
     margin-bottom: 5em;
+    min-width: 600px;
   }
   #contactBody li {
     margin: .5em 0;

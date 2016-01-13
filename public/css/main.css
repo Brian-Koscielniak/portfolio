@@ -203,13 +203,17 @@ footer p {
     margin-bottom: 300px;
   }
   main {
-    padding: 10%;
+    padding: 4em 10%;
   }
   /* drop nav */
   #navToggler {
     margin-left: 0;
   }
   /* main nav */
+  #mainNav {
+    position: absolute;
+    left: -1em;
+  }
   #mainNav ul {
     display: flex;
     flex-direction: row;
@@ -245,7 +249,7 @@ footer p {
     margin-bottom: 400px;
   }
   main {
-    padding: 20%;
+    padding: 2em 20%;
   }
   /* drop nav */
   .toggleBars {
