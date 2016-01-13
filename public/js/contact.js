@@ -7,19 +7,10 @@ submitBTN.addEventListener('click', handleSubmit);
 function handleSubmit(e){
 	var userInput = document.querySelectorAll('#contactBody .userInfo')
 
-	// Check to see	if there is more than empty or white space inside of inputs
-	for(i=0;i<userInput.length;i++){
-		if(!(/\S/.test(userInput[i].value))){
-			// The input is set to nothing. We don't want a bunch of spaces
-			userInput[i].value = "";
+	if(!validate(userInput)){ return; } 
 
-			// Don't send
-			return false;
-		}
-	}
-
-	// stop the form from refreshing page
-	e.preventDefault();
+	// stop the form from refreshing page 
+	e.preventDefault(); // TODO: Also prevents required messages. email isn't checked when all feilds are filled
 
 	// Make userInput into JSON
 	userInput = {
@@ -35,19 +26,37 @@ function handleSubmit(e){
 }
 
 function handleResponse(res){
-	if (res.responseText !== '200'){
-		make_infoBox(true);
-	} else {
+	if (res.responseText == '200'){
 		// Clear out the inputs on success.
 		var userInput = document.querySelectorAll('#contactBody .userInfo')
 		for(i=0;i<userInput.length;i++){
 			userInput[i].value = "";
 		}
-		make_infoBox();
+		make_infoBox('ok');
+	} else if (res.responseText == 'invalid'){
+		make_infoBox('email');
+	} else {
+		make_infoBox('err');
 	}
 }
 
-function make_infoBox(err){
+function validate(input){
+	// Check to see	if there is more than empty or white space inside of inputs
+	for(i=0;i<input.length;i++){
+		if(!(/\S/.test(input[i].value))){
+			// The input is set to nothing. We don't want a bunch of spaces
+			input[i].value = "";
+
+			return false;
+		}
+	}
+	return true;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Display and Cosmetic ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+function make_infoBox(code){
 /* This function will create a display on the UI notifying whether or not the POST was successful */
 	clearTimeout(clear_infoBox); 
 
@@ -60,18 +69,24 @@ function make_infoBox(err){
 	okBtn.setAttribute('class', 'okBtn');
 	okBtn.setAttribute('value', 'ok');
 
-	if (err){
-		// if err is passed on function call
-		icon.setAttribute('class', 'fa fa-close');
-		msg.appendChild(icon);
-		msg.appendChild(document.createTextNode('There was an error and the message was not recieved. Please try again in a few minutes.'));
-		infoBox.setAttribute('class', 'infoBox infoError');
-	} else {
+	if (code == 'ok'){
 		// Success
 		icon.setAttribute('class', 'fa fa-check');
 		msg.appendChild(icon);
 		msg.appendChild(document.createTextNode('Success, the message has been recieved. Thank you for your feedback!'));
 		infoBox.setAttribute('class', 'infoBox');
+	} else if (code == 'email'){
+		// Invalid email
+		icon.setAttribute('class', 'fa fa-close');
+		msg.appendChild(icon);
+		msg.appendChild(document.createTextNode('Please make sure the email address provided is correctly typed and valid.'));
+		infoBox.setAttribute('class', 'infoBox infoError');
+	} else {
+		// Any other error
+		icon.setAttribute('class', 'fa fa-close');
+		msg.appendChild(icon);
+		msg.appendChild(document.createTextNode('There was an error and the message was not recieved. Please try again in a few minutes.'));
+		infoBox.setAttribute('class', 'infoBox infoError');
 	}
 
 	// Append and add functionality
@@ -88,9 +103,3 @@ function make_infoBox(err){
 		document.body.removeChild(document.querySelector('.infoBox'));
 	}, 20000);
 }
-
-/*/////////////////
-// TODO: strange email values break the server. The value "1@1.1" gives: http Error: Can't set headers after they are sent.
-	- validate
-	- regex	
-*/
