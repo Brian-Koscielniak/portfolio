@@ -63,11 +63,19 @@ body {
   background: #FEFFFB;
   min-height: 500px;
 }
+#mainNav {
+  background: #FEFFFB;
+}
 main {
   background: #FEFFFB;
 }
 a {
   color: #f87e00;
+}
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 /* dropNav */
 #dropNav {

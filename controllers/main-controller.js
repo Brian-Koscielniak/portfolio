@@ -6,7 +6,10 @@ exports.home = function(req, res){
 	res.render('index.jade');
 }
 exports.info = function(req, res){
-	res.render('info.jade');
+	// Retrieve info text
+	fs.readFile(__dirname + '/../public/assets/infoText', 'utf-8', function (err,text) {
+		res.render('info.jade', {text : text});
+	});
 }
 exports.projects = function(req, res){
 	res.render('projects.jade');

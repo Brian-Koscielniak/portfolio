@@ -1,0 +1,34 @@
+/* TABLE OF CONTENTS ==================
+- h tags
+- profile image
+- ajust positions and sizing
+==================================== */
+/* <h_> tags */
+h1 {
+  font-size: 250%;
+}
+#hgroup {
+  margin-bottom: 1em;
+}
+/* profile image */
+main {
+  display: flex;
+  display: -webkit-flex;
+}
+#head-shot {
+  flex: 2 0 30%;
+  -webkit-flex: 2 0 30%;
+  margin: 2em;
+  -webkit-shape-outside: circle();
+}
+#head-shot img {
+  border-radius: 100em;
+  max-width: 25em;
+}
+/* adjust block positions, and sizes */
+@media screen and (max-width: 60em) {
+  main {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+  }
+}
