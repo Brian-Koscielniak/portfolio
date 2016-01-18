@@ -5,14 +5,14 @@ var fs = require('fs');
 exports.home = function(req, res){
 	res.render('index.jade');
 }
-exports.info = function(req, res){
+exports.about = function(req, res){
 	// Retrieve info text
 	fs.readFile(__dirname + '/../public/assets/infoText', 'utf-8', function (err,text) {
-		res.render('info.jade', {text : text});
+		res.render('about.jade', {text : text});
 	});
 }
-exports.projects = function(req, res){
-	res.render('projects.jade');
+exports.showcase = function(req, res){
+	res.render('showcase.jade');
 }
 exports.contact = function(req, res){
 	res.render('contact.jade');
