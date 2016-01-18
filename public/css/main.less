@@ -78,8 +78,10 @@
 
 	/* content */
 	body {
+		.colFlex;
 		background: @techWhite;
 		min-height: 500px;
+		margin-bottom: 400px;
 	}
 	main {
 		background: @techWhite;
@@ -226,6 +228,7 @@
 		justify-content: center;
 		text-align: center;
 		align-items: center;
+		height: 400px;
 		width: 100%;
 		background: @techGreen;
 		color: @techWhite;
@@ -263,11 +266,10 @@
 @media screen and (max-width: 30em){
 	/* content */
 	body {
-		.colFlex;
-		margin-bottom: 300px;
+		margin-bottom: 500px;
 	}
 	main {
-		padding: 2px;
+		padding: 2px 2px 5em;
 	}
 	
 	/* dropNav */
@@ -299,6 +301,7 @@
 						color: @techDark;
 						text-shadow: 0 0 2px @techWhite;
 						background: lighten(@techGrey, 20%);
+						text-decoration: none;	
 					}
 				}
 			}
@@ -308,17 +311,13 @@
 	/* footer */
 	footer {
 		order: 1;
-		min-height: 300px;
+		min-height: 500px;
 	}
 }
 
 /* medium screen */
 @media screen and (min-width: 30em) and (max-width: 60em){
 	/* content */
-	body {
-		.colFlex;
-		margin-bottom: 300px;
-	}
 	main {
 		padding: 4em 10%;
 	}
@@ -331,20 +330,11 @@
 		flex-direction: column;
 		align-items: center;
 	}
-
-	/* footer */
-	footer {
-		height: 300px;
-	}
 }
 
 /* larger screen size specific */
 @media screen and (min-width: 60em){
 	/* content */
-	body {
-		.colFlex;
-		margin-bottom: 400px;
-	}
 	main {
 		padding: 2em 20%;
 	}
@@ -354,11 +344,6 @@
 		div:first-of-type {
 			align-self: center;
 		}
-	}
-
-	/* footer */
-	footer {
-		height: 400px;
 	}
 }
 
