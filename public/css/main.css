@@ -144,6 +144,7 @@ figure img {
 #dropNav div ul:first-child ul li:last-of-type {
   border: none;
 }
+/* Properly position nav items */
 .toggleBars {
   order: 1;
 }
@@ -317,16 +318,24 @@ footer p {
     flex-direction: column;
     align-items: center;
   }
+  /* Sizing nav items for even centered */
+  .navItem {
+    width: 7em;
+  }
 }
 /* larger screen size specific */
 @media screen and (min-width: 60em) {
   /* content */
   main {
-    padding: 2em 20%;
+    padding: 4em 20% 8em;
   }
   /* drop nav */
   #dropNav div:first-of-type {
     align-self: center;
+  }
+  /* Sizing nav items for even centered */
+  .navItem {
+    width: 8em;
   }
 }
 /* font-awesome customize */
