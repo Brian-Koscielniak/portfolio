@@ -1,0 +1,121 @@
+/* TABLE OF CONTENTS ==================
+- zero main
+- content
+- project box
+	- animations for project box
+- backgrounds
+- size specific
+==================================== */
+
+/* zero main left and right box-properties, to allow full use of space */
+main {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/* Content */
+h1 {
+	text-align: center;
+	margin: 2em;
+}
+
+/* Setting Project boxes */
+#projectArea {
+	display: flex;
+	flex-flow: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.project {
+	height: 400px;
+	width: 400px;
+	background: black;
+	overflow: hidden;
+	animation-name: sizeDown;
+	animation-duration: .25s;
+	&:hover, &:focus {
+		background-size: 110%;
+		animation-name: sizeUp;
+		animation-duration: .25s;
+		a {
+			opacity: 1;
+			background: rgba(0,0,0,.6);
+			animation-name: revealMe;
+			animation-duration: .25s;
+		}
+	}
+	a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		opacity: 0;
+		text-decoration: none;
+		color: white;
+		height: 400px;
+		width: 400px;
+		animation-name: hideMe;
+		animation-duration: .25s;
+	}
+	
+	/* details */
+	span {
+		font-size: 400%;
+	}
+	p:hover {
+		text-decoration: underline;
+	}
+}
+
+/* Animations for project boxes */
+	@keyframes sizeUp {
+		0% {background-size: 100%;}
+		100% {background-size: 110%;}
+	}
+	@keyframes sizeDown {
+		0% {background-size: 110%;}
+		100% {background-size: 100%;}
+	}
+	@keyframes revealMe {
+		0% {opacity: 0; background: rgba(0,0,0,0)}
+		100% {opacity: 1; background: rgba(0,0,0,.6)}
+	}
+	@keyframes hideMe {
+		0% {opacity: 1; background: rgba(0,0,0,.6)}
+		100% {opacity: 0; background: rgba(0,0,0,0)}
+	}
+
+/* backgrounds */
+.realtorApp {
+	background: url('http://lorempixel.com/g/400/400/');
+	background-position: center center;
+}
+.cmsApp {
+	background: url('http://lorempixel.com/g/400/400/business');
+	background-position: center center;
+}
+
+/* size specific */
+@media screen and (max-width: 30em) {
+	.project {
+		height: 300px;
+		width: 300px;
+		a {
+			height: 300px;
+			width: 300px;
+			opacity: 1;
+		}
+	}
+	.realtorApp {
+		background: url('http://lorempixel.com/g/300/300/');
+		background-position: center center;
+	}
+	.cmsApp {
+		background: url('http://lorempixel.com/g/300/300/business');
+		background-position: center center;
+	}
+}
+	

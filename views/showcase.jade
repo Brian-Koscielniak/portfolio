@@ -1,20 +1,23 @@
 extends ./layout.jade
 
+block uniqueStyles
+	link(rel='stylesheet' type='text/css' href='css/showcase.css')
+
 block content
 	h1 My Work
 	section#projectArea
+		div.project.realtorApp
+			a(href="#" tabindex='0')
+				span(class='fa fa-calculator')
+				h2 Realtor Application
+				p View project
+		div.project.cmsApp
+			a(href="#" tabindex='1')
+				span(class='fa fa-pencil-square-o')
+				h2 CMS Application
+				p View project
 		div.project
-			img(src='http://lorempixel.com/g/500/500/' alt='Project')
-			p.projectDescription This project was done yap yap yap ipsum blah blah lorem
-		div.project
-			img(src='http://lorempixel.com/g/500/500/' alt='Project')
-			p.projectDescription This project was done yap yap yap ipsum blah blah lorem
-		div.project
-			img(src='http://lorempixel.com/g/500/500/' alt='Project')
-			p.projectDescription This project was done yap yap yap ipsum blah blah lorem
-		div.project
-			img(src='http://lorempixel.com/g/500/500/' alt='Project')
-			p.projectDescription This project was done yap yap yap ipsum blah blah lorem
-		div.project
-			img(src='http://lorempixel.com/g/500/500/' alt='Project')
-			p.projectDescription This project was done yap yap yap ipsum blah blah lorem
+			a(href="#" tabindex='2')
+				span(class='fa fa-code')
+				h2 Something Else
+				p View project
