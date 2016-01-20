@@ -1,4 +1,5 @@
 /* TABLE OF CONTENTS ==================
+- LESS
 - zero main
 - content
 - project box
@@ -6,6 +7,21 @@
 - backgrounds
 - size specific
 ==================================== */
+
+
+
+/* LESS variables, mixins, etc */
+	/* variables */
+	@root: "http://lorempixel.com/g/";
+	@bigBox: 400;
+	@smallBox: 300;
+
+	/* mixins */
+	.project-background(@size: '@{smallBox}/', @file: abstract){
+		@url: "@{root}@{size}@{size}@{file}";
+		background: url(@url);
+		background-position: center center;
+	}
 
 /* zero main left and right box-properties, to allow full use of space */
 main {
@@ -29,8 +45,8 @@ h1 {
 	justify-content: center;
 }
 .project {
-	height: 400px;
-	width: 400px;
+	height: unit(@bigBox, px);
+	width: unit(@bigBox, px);
 	background: black;
 	overflow: hidden;
 	animation-name: sizeDown;
@@ -55,8 +71,8 @@ h1 {
 		opacity: 0;
 		text-decoration: none;
 		color: white;
-		height: 400px;
-		width: 400px;
+		height: unit(@bigBox, px);
+		width: unit(@bigBox, px);
 		animation-name: hideMe;
 		animation-duration: .25s;
 	}
@@ -90,32 +106,48 @@ h1 {
 
 /* backgrounds */
 .realtorApp {
-	background: url('http://lorempixel.com/g/400/400/');
-	background-position: center center;
+	.project-background('@{bigBox}/', 'abstract');
 }
 .cmsApp {
-	background: url('http://lorempixel.com/g/400/400/business');
-	background-position: center center;
+	.project-background('@{bigBox}/', 'business');
+}
+.cardApp {
+	.project-background('@{bigBox}/', 'nature');
+}
+.branding {
+	.project-background('@{bigBox}/', 'fashion');
+}
+.flexProject {
+	.project-background('@{bigBox}/', 'city');
 }
 
 /* size specific */
 @media screen and (max-width: 30em) {
 	.project {
-		height: 300px;
-		width: 300px;
+		height: unit(@smallBox, px);
+		width: unit(@smallBox, px); 
 		a {
-			height: 300px;
-			width: 300px;
+			height: unit(@smallBox, px);
+			width: unit(@smallBox, px);
 			opacity: 1;
 		}
 	}
+
+	/* backgrounds */
 	.realtorApp {
-		background: url('http://lorempixel.com/g/300/300/');
-		background-position: center center;
+		.project-background('@{smallBox}/', 'abstract');
 	}
 	.cmsApp {
-		background: url('http://lorempixel.com/g/300/300/business');
-		background-position: center center;
+		.project-background('@{smallBox}/', 'business');
+	}
+	.cardApp {
+		.project-background('@{smallBox}/', 'nature');
+	}
+	.branding {
+		.project-background('@{smallBox}/', 'fashion');
+	}
+	.flexProject {
+		.project-background('@{smallBox}/', 'city');
 	}
 }
 	

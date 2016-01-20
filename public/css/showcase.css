@@ -1,4 +1,5 @@
 /* TABLE OF CONTENTS ==================
+- LESS
 - zero main
 - content
 - project box
@@ -6,6 +7,9 @@
 - backgrounds
 - size specific
 ==================================== */
+/* LESS variables, mixins, etc */
+/* variables */
+/* mixins */
 /* zero main left and right box-properties, to allow full use of space */
 main {
   padding-left: 0;
@@ -105,11 +109,23 @@ h1 {
 }
 /* backgrounds */
 .realtorApp {
-  background: url('http://lorempixel.com/g/400/400/');
+  background: url("http://lorempixel.com/g/400/400/abstract");
   background-position: center center;
 }
 .cmsApp {
-  background: url('http://lorempixel.com/g/400/400/business');
+  background: url("http://lorempixel.com/g/400/400/business");
+  background-position: center center;
+}
+.cardApp {
+  background: url("http://lorempixel.com/g/400/400/nature");
+  background-position: center center;
+}
+.branding {
+  background: url("http://lorempixel.com/g/400/400/fashion");
+  background-position: center center;
+}
+.flexProject {
+  background: url("http://lorempixel.com/g/400/400/city");
   background-position: center center;
 }
 /* size specific */
@@ -123,12 +139,25 @@ h1 {
     width: 300px;
     opacity: 1;
   }
+  /* backgrounds */
   .realtorApp {
-    background: url('http://lorempixel.com/g/300/300/');
+    background: url("http://lorempixel.com/g/300/300/abstract");
     background-position: center center;
   }
   .cmsApp {
-    background: url('http://lorempixel.com/g/300/300/business');
+    background: url("http://lorempixel.com/g/300/300/business");
+    background-position: center center;
+  }
+  .cardApp {
+    background: url("http://lorempixel.com/g/300/300/nature");
+    background-position: center center;
+  }
+  .branding {
+    background: url("http://lorempixel.com/g/300/300/fashion");
+    background-position: center center;
+  }
+  .flexProject {
+    background: url("http://lorempixel.com/g/300/300/city");
     background-position: center center;
   }
 }
