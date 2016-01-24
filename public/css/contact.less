@@ -1,18 +1,30 @@
 /* TABLE OF CONTENTS ==================
-
+- LESS
+	- theme
+	- mixins
+- Adjusting Defaults
+- Constants
+- Small Screen
+	- Positioning
+	- Style
+	- Contact info box
+- Medium Screen
+	- Positioning
+	- Style
+	- Contact info box
+- Large Screen
+	- Positioning
+	- Style
+	- Contact info box
+- UI infoBox
 ==================================== */
 
 /* LESS variables, mixins, etc */
-	/* colors */
-		/* High Tech theme by jedis @ color.adobe.com */
-		@techGrey: #849696;
-		@techWhite: #FEFFFB;
-		@techDark: #232D33;
-		@techGreen: #17384C;
-		@techOrange: #FF972C;
+	/* import theme (colors, fonts, etc) */
+	@import (less) "theme.less";
 
 	/* mixins */
-	.box-n-border(@boxWidth: 50%, @radius: 5px, @boxColor: @techOrange){
+	.box-n-border(@boxWidth: 50%, @radius: 5px, @boxColor: @bmkBlue){
 		background: @boxColor;
 		border-radius: @radius;
 		border-bottom: 1px solid hsla(0, 0%, 0%, .25);
@@ -24,7 +36,7 @@
 		padding: .5em;
 		width: @boxWidth;
 	}
-	.labelText(@labelColor: @techWhite;){
+	.labelText(@labelColor: @bmkWhite;){
 		color: @labelColor;
 		font-size: 1.25em;
 		font-weight: bold;
@@ -102,7 +114,7 @@ fieldset {
 
 	/* style */
 	#contactForm {
-		.box-n-border(100%, 5px, lighten(@techGrey, 40%));
+		.box-n-border(100%, 5px, darken(@bmkWhite, 5%));
 	}
 
 	#contactBody {
@@ -112,19 +124,19 @@ fieldset {
 			border-bottom: none;
 		}
 		textarea {
-			.box-n-border(100%, 0 0 5px 5px, @techWhite);
+			.box-n-border(100%, 0 0 5px 5px, lighten(@bmkWhite, 10%));
 			.fieldText;
 			height: 8em;
 		}
 		input {
-			.box-n-border(100%, 0 0 5px 5px, @techWhite);
+			.box-n-border(100%, 0 0 5px 5px, lighten(@bmkWhite, 10%));
 			.fieldText;
 		}
 		input[type=submit] {
 			.box-n-border(30%, 5px);
 			.labelText;
 			&[type=submit]:hover {
-				background: lighten(@techOrange, 15%);
+				background: lighten(@bmkBlue, 15%);
 				cursor: pointer;
 			}
 		}
@@ -132,7 +144,7 @@ fieldset {
 
 	/* contact info styling */
 	#businessCard {
-		.box-n-border(100%, 5px, lighten(@techGrey, 40%));
+		.box-n-border(100%, 5px, darken(@bmkWhite, 5%));
 		margin-bottom: 1em;
 	}
 }
@@ -166,7 +178,7 @@ fieldset {
 
 	/* style */
 	#contactForm {
-		.box-n-border(100%, 5px, lighten(@techGrey, 40%));
+		.box-n-border(100%, 5px, darken(@bmkWhite, 5%));
 		
 	}
 	#contactBody {
@@ -175,19 +187,19 @@ fieldset {
 			.labelText;
 		}
 		textarea {
-			.box-n-border(70%, 0 5px 5px 0, @techWhite);
+			.box-n-border(70%, 0 5px 5px 0, lighten(@bmkWhite, 10%));
 			.fieldText;
 			height: 8em;
 		}
 		input {
-			.box-n-border(70%, 0 5px 5px 0, @techWhite);
+			.box-n-border(70%, 0 5px 5px 0, lighten(@bmkWhite, 10%));
 			.fieldText;
 		}
 		input[type=submit] {
 			.box-n-border(20%, 5px);
 			.labelText;
 			&[type=submit]:hover {
-				background: lighten(@techOrange, 15%);
+				background: lighten(@bmkBlue, 15%);
 				cursor: pointer;
 			}
 		}
@@ -195,7 +207,7 @@ fieldset {
 
 	/* contact info styling */
 	#businessCard {
-		.box-n-border(100%, 5px, lighten(@techGrey, 40%));
+		.box-n-border(100%, 5px, darken(@bmkWhite, 5%));
 		margin-bottom: 1em;
 		min-width: 450px;
 	}
@@ -227,7 +239,7 @@ fieldset {
 
 	/* style */
 	#contactForm {
-		.box-n-border(70%, 5px, lighten(@techGrey, 40%));
+		.box-n-border(70%, 5px, darken(@bmkWhite, 5%));
 	}
 	#contactBody {
 		label {
@@ -235,19 +247,19 @@ fieldset {
 			.labelText;
 		}
 		textarea {
-			.box-n-border(70%, 0 5px 5px 0, @techWhite);
+			.box-n-border(70%, 0 5px 5px 0, lighten(@bmkWhite, 10%));
 			.fieldText;
 			height: 8em;
 		}
 		input {
-			.box-n-border(70%, 0 5px 5px 0, @techWhite);
+			.box-n-border(70%, 0 5px 5px 0, lighten(@bmkWhite, 10%));
 			.fieldText;
 		}
 		input[type=submit] {
 			.box-n-border(20%, 5px);
 			.labelText;
 			&[type=submit]:hover {
-				background: lighten(@techOrange, 15%);
+				background: lighten(@bmkBlue, 15%);
 				cursor: pointer;
 			}
 		}
@@ -255,13 +267,12 @@ fieldset {
 
 	/* contact info styling */
 	#businessCard {
-		.box-n-border(30%, 5px, lighten(@techGrey, 40%));
+		.box-n-border(30%, 5px, darken(@bmkWhite, 5%));
 		margin-left: 1em;
 	}
 }
 
-/* infoBox Styles */
-
+/* UI infoBox Styles */
 .infoBox {
 	position: fixed;
 	top: 0;
@@ -277,7 +288,7 @@ fieldset {
 		padding: 1em;
 		min-width: 300px;
 		box-shadow: 2px 2px 4px #555;
-		background: darken(@techWhite, 5%);
+		background: darken(@bmkWhite, 5%);
 		span {
 			font-size: 1.5em;
 			padding: .2em;

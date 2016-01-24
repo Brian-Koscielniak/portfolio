@@ -1,9 +1,34 @@
 /* TABLE OF CONTENTS ==================
-
+- LESS
+	- theme
+	- mixins
+- Adjusting Defaults
+- Constants
+- Small Screen
+	- Positioning
+	- Style
+	- Contact info box
+- Medium Screen
+	- Positioning
+	- Style
+	- Contact info box
+- Large Screen
+	- Positioning
+	- Style
+	- Contact info box
+- UI infoBox
 ==================================== */
 /* LESS variables, mixins, etc */
-/* colors */
-/* High Tech theme by jedis @ color.adobe.com */
+/* import theme (colors, fonts, etc) */
+/* TABLE OF CONTENTS ==================
+- Colors
+- Fonts
+==================================== */
+/* Color Scheme by Brian Koscielniak */
+/* Font */
+.bmkFont {
+  font-family: 'Open Sans', sans-serif;
+}
 /* mixins */
 .fieldText {
   font-size: 1.25em;
@@ -64,7 +89,7 @@ fieldset {
   }
   /* style */
   #contactForm {
-    background: #f2f4f4;
+    background: #e6e6e6;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -76,7 +101,7 @@ fieldset {
     width: 100%;
   }
   #contactBody label {
-    background: #FF972C;
+    background: #3588af;
     border-radius: 5px 5px 0 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -86,14 +111,14 @@ fieldset {
     box-sizing: border-box;
     padding: .5em;
     width: 100%;
-    color: #FEFFFB;
+    color: #f3f3f3;
     font-size: 1.25em;
     font-weight: bold;
     text-shadow: 2px 2px 4px grey;
     border-bottom: none;
   }
   #contactBody textarea {
-    background: #FEFFFB;
+    background: #ffffff;
     border-radius: 0 0 5px 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -107,7 +132,7 @@ fieldset {
     height: 8em;
   }
   #contactBody input {
-    background: #FEFFFB;
+    background: #ffffff;
     border-radius: 0 0 5px 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -120,7 +145,7 @@ fieldset {
     font-size: 1.25em;
   }
   #contactBody input[type=submit] {
-    background: #FF972C;
+    background: #3588af;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -130,18 +155,18 @@ fieldset {
     box-sizing: border-box;
     padding: .5em;
     width: 30%;
-    color: #FEFFFB;
+    color: #f3f3f3;
     font-size: 1.25em;
     font-weight: bold;
     text-shadow: 2px 2px 4px grey;
   }
   #contactBody input[type=submit][type=submit]:hover {
-    background: #ffbd79;
+    background: #61accf;
     cursor: pointer;
   }
   /* contact info styling */
   #businessCard {
-    background: #f2f4f4;
+    background: #e6e6e6;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -180,7 +205,7 @@ fieldset {
   }
   /* style */
   #contactForm {
-    background: #f2f4f4;
+    background: #e6e6e6;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -192,7 +217,7 @@ fieldset {
     width: 100%;
   }
   #contactBody label {
-    background: #FF972C;
+    background: #3588af;
     border-radius: 5px 0 0 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -202,13 +227,13 @@ fieldset {
     box-sizing: border-box;
     padding: .5em;
     width: 30%;
-    color: #FEFFFB;
+    color: #f3f3f3;
     font-size: 1.25em;
     font-weight: bold;
     text-shadow: 2px 2px 4px grey;
   }
   #contactBody textarea {
-    background: #FEFFFB;
+    background: #ffffff;
     border-radius: 0 5px 5px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -222,7 +247,7 @@ fieldset {
     height: 8em;
   }
   #contactBody input {
-    background: #FEFFFB;
+    background: #ffffff;
     border-radius: 0 5px 5px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -235,7 +260,7 @@ fieldset {
     font-size: 1.25em;
   }
   #contactBody input[type=submit] {
-    background: #FF972C;
+    background: #3588af;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -245,18 +270,18 @@ fieldset {
     box-sizing: border-box;
     padding: .5em;
     width: 20%;
-    color: #FEFFFB;
+    color: #f3f3f3;
     font-size: 1.25em;
     font-weight: bold;
     text-shadow: 2px 2px 4px grey;
   }
   #contactBody input[type=submit][type=submit]:hover {
-    background: #ffbd79;
+    background: #61accf;
     cursor: pointer;
   }
   /* contact info styling */
   #businessCard {
-    background: #f2f4f4;
+    background: #e6e6e6;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -293,7 +318,7 @@ fieldset {
   }
   /* style */
   #contactForm {
-    background: #f2f4f4;
+    background: #e6e6e6;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -305,7 +330,7 @@ fieldset {
     width: 70%;
   }
   #contactBody label {
-    background: #FF972C;
+    background: #3588af;
     border-radius: 5px 0 0 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -315,13 +340,13 @@ fieldset {
     box-sizing: border-box;
     padding: .5em;
     width: 30%;
-    color: #FEFFFB;
+    color: #f3f3f3;
     font-size: 1.25em;
     font-weight: bold;
     text-shadow: 2px 2px 4px grey;
   }
   #contactBody textarea {
-    background: #FEFFFB;
+    background: #ffffff;
     border-radius: 0 5px 5px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -335,7 +360,7 @@ fieldset {
     height: 8em;
   }
   #contactBody input {
-    background: #FEFFFB;
+    background: #ffffff;
     border-radius: 0 5px 5px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -348,7 +373,7 @@ fieldset {
     font-size: 1.25em;
   }
   #contactBody input[type=submit] {
-    background: #FF972C;
+    background: #3588af;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -358,18 +383,18 @@ fieldset {
     box-sizing: border-box;
     padding: .5em;
     width: 20%;
-    color: #FEFFFB;
+    color: #f3f3f3;
     font-size: 1.25em;
     font-weight: bold;
     text-shadow: 2px 2px 4px grey;
   }
   #contactBody input[type=submit][type=submit]:hover {
-    background: #ffbd79;
+    background: #61accf;
     cursor: pointer;
   }
   /* contact info styling */
   #businessCard {
-    background: #f2f4f4;
+    background: #e6e6e6;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -382,7 +407,7 @@ fieldset {
     margin-left: 1em;
   }
 }
-/* infoBox Styles */
+/* UI infoBox Styles */
 .infoBox {
   position: fixed;
   top: 0;
@@ -395,7 +420,7 @@ fieldset {
   justify-content: center;
 }
 .infoBox p {
-  background: #FF972C;
+  background: #3588af;
   border-radius: 5px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -408,7 +433,7 @@ fieldset {
   padding: 1em;
   min-width: 300px;
   box-shadow: 2px 2px 4px #555;
-  background: #f8ffe2;
+  background: #e6e6e6;
 }
 .infoBox p span {
   font-size: 1.5em;

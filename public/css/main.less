@@ -1,6 +1,6 @@
 /* TABLE OF CONTENTS ==================
 - LESS
-	- colors
+	- theme
 	- mixins
 - Adjusting Defaults
 - Setting global styling
@@ -26,20 +26,8 @@
 
 
 /* LESS variables, mixins, etc */
-	/* colors */
-		/* Sea Wolf theme by xizzzy @ color.adobe.com */
-		@wolfRed: #DC3522;
-		@wolfTan: #D9CB9E;
-		@wolfGreen: #374140;
-		@wolfGrey: #2A2C2B;
-		@wolfDark: #1E1E20;
-
-		/* High Tech theme by jedis @ color.adobe.com */
-		@techGrey: #849696;
-		@techWhite: #FEFFFB;
-		@techDark: #232D33;
-		@techGreen: #17384C;
-		@techOrange: #FF972C;
+	/* import theme (colors, fonts, etc) */
+	@import (less) "theme.less";
 
 	/* mixins */
 	.colFlex {
@@ -55,7 +43,7 @@
 		border: none;
 		font-size: 100%;
 		font-weight: normal;
-		font-family: 'Open Sans', sans-serif;
+		.bmkFont;
 		line-height: 150%;
 	}
 
@@ -79,15 +67,15 @@
 	/* content */
 	body {
 		.colFlex;
-		background: @techWhite;
+		background: @bmkWhite;
 		min-height: 500px;
 		margin-bottom: 400px;
 	}
 	main {
-		background: @techWhite;
+		background: @bmkWhite;
 	}
 	a {
-		color: darken(@techOrange, 10%);
+		color: darken(@bmkBlue, 10%);
 	}
 	figure {
 		img {
@@ -99,7 +87,7 @@
 
 	/* main navigation */
 	#mainNav {
-		background: @techWhite;
+		background: @bmkWhite;
 		width: 100%;
 		ul {
 			display: flex;
@@ -129,8 +117,8 @@
 	#dropNav {
 		width: 100%;
 		overflow: hidden;
-		background: @techDark;
-		color: @techWhite;
+		background: @bmkBlack;
+		color: @bmkWhite;
 
 		display: flex;
 		justify-content: center;
@@ -151,12 +139,12 @@
 				li {
 					padding: .5em 0;
 					list-style-type: none;
-					border-bottom: 1px solid fade(@techWhite, 30%);
+					border-bottom: 1px solid fade(@bmkWhite, 30%);
 				}
 				ul {
 					font-weight: normal;
 					font-size: (100% - 10%);
-					color: fade(@techWhite, 80%);
+					color: fade(@bmkWhite, 80%);
 					li {
 						padding: .25em 0;
 						margin: 0 .25em;
@@ -233,15 +221,15 @@
 		align-items: center;
 		height: 400px;
 		width: 100%;
-		background: @techGreen;
-		color: @techWhite;
+		background: @bmkBlue;
+		color: @bmkWhite;
 		position: fixed;
 		bottom: 0;
 		left: 0;
 		z-index: -2;
 		.social a {
 			border-radius: 4em;
-			background: darken(@techGreen, 5%);
+			background: darken(@bmkBlue, 5%);
 		}
 		a {
 			width: 1em;
@@ -249,9 +237,9 @@
 			font-size: 1.5em;
 			text-decoration: none;
 			padding: .75em;
-			color: @techWhite;
+			color: @bmkWhite;
 			&:hover {
-				color: @techOrange;
+				color: @bmkBlue;
 			}
 		}
 		p {
@@ -261,7 +249,7 @@
 	/* details */
 	.tagline {
 		span {
-			color: lighten(@techGrey, 10%);
+			color: lighten(@bmkGrey, 10%);
 		}
 	}
 
@@ -293,17 +281,17 @@
 				text-align: center;
 				a {
 					flex: 1;
-					color: @techWhite;
+					color: @bmkWhite;
 					font-size: 1.25em;
 					font-weight: bold;
-					background: @techGrey;
-					outline: @techDark solid 1px;
+					background: @bmkGrey;
+					outline: @bmkBlack solid 1px;
 					line-height: 4em; /* sizes the nav */
 					text-decoration: none;	
 					&:hover {
-						color: @techDark;
-						text-shadow: 0 0 2px @techWhite;
-						background: lighten(@techGrey, 20%);
+						color: @bmkBlack;
+						text-shadow: 0 0 2px @bmkWhite;
+						background: lighten(@bmkGrey, 20%);
 						text-decoration: none;	
 					}
 				}
@@ -363,8 +351,8 @@
 /* font-awesome customize */
 #navToggler {
 	size: 1.2em;
-	background: @techDark;
-	color: @techWhite;
+	background: @bmkBlack;
+	color: @bmkWhite;
 	padding: 1em 1.5em;
 	cursor: pointer;
 	margin: auto 1em;

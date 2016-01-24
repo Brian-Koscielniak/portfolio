@@ -1,6 +1,6 @@
 /* TABLE OF CONTENTS ==================
 - LESS
-	- colors
+	- theme
 	- mixins
 - Adjusting Defaults
 - Setting global styling
@@ -23,9 +23,16 @@
 - font-awesome customize
 ==================================== */
 /* LESS variables, mixins, etc */
-/* colors */
-/* Sea Wolf theme by xizzzy @ color.adobe.com */
-/* High Tech theme by jedis @ color.adobe.com */
+/* import theme (colors, fonts, etc) */
+/* TABLE OF CONTENTS ==================
+- Colors
+- Fonts
+==================================== */
+/* Color Scheme by Brian Koscielniak */
+/* Font */
+.bmkFont {
+  font-family: 'Open Sans', sans-serif;
+}
 /* mixins */
 .colFlex {
   display: flex;
@@ -62,15 +69,15 @@ p {
 body {
   display: flex;
   flex-direction: column;
-  background: #FEFFFB;
+  background: #f3f3f3;
   min-height: 500px;
   margin-bottom: 400px;
 }
 main {
-  background: #FEFFFB;
+  background: #f3f3f3;
 }
 a {
-  color: #f87e00;
+  color: #296a88;
 }
 figure img {
   display: block;
@@ -79,7 +86,7 @@ figure img {
 }
 /* main navigation */
 #mainNav {
-  background: #FEFFFB;
+  background: #f3f3f3;
   width: 100%;
 }
 #mainNav ul {
@@ -107,8 +114,8 @@ figure img {
 #dropNav {
   width: 100%;
   overflow: hidden;
-  background: #232D33;
-  color: #FEFFFB;
+  background: #111111;
+  color: #f3f3f3;
   display: flex;
   justify-content: center;
   align-items: flex-top;
@@ -130,12 +137,12 @@ figure img {
 #dropNav div ul:first-child li {
   padding: .5em 0;
   list-style-type: none;
-  border-bottom: 1px solid rgba(254, 255, 251, 0.3);
+  border-bottom: 1px solid rgba(243, 243, 243, 0.3);
 }
 #dropNav div ul:first-child ul {
   font-weight: normal;
   font-size: 90%;
-  color: rgba(254, 255, 251, 0.8);
+  color: rgba(243, 243, 243, 0.8);
 }
 #dropNav div ul:first-child ul li {
   padding: .25em 0;
@@ -224,8 +231,8 @@ footer {
   align-items: center;
   height: 400px;
   width: 100%;
-  background: #17384C;
-  color: #FEFFFB;
+  background: #3588af;
+  color: #f3f3f3;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -233,7 +240,7 @@ footer {
 }
 footer .social a {
   border-radius: 4em;
-  background: #112a38;
+  background: #2f799b;
 }
 footer a {
   width: 1em;
@@ -241,17 +248,17 @@ footer a {
   font-size: 1.5em;
   text-decoration: none;
   padding: .75em;
-  color: #FEFFFB;
+  color: #f3f3f3;
 }
 footer a:hover {
-  color: #FF972C;
+  color: #3588af;
 }
 footer p {
   max-width: 600px;
 }
 /* details */
 .tagline span {
-  color: #a0adad;
+  color: #b4bcbe;
 }
 /* small screen specific */
 @media screen and (max-width: 30em) {
@@ -283,19 +290,19 @@ footer p {
   }
   #mainNav ul li a {
     flex: 1;
-    color: #FEFFFB;
+    color: #f3f3f3;
     font-size: 1.25em;
     font-weight: bold;
-    background: #849696;
-    outline: #232D33 solid 1px;
+    background: #99a3a6;
+    outline: #111111 solid 1px;
     line-height: 4em;
     /* sizes the nav */
     text-decoration: none;
   }
   #mainNav ul li a:hover {
-    color: #232D33;
-    text-shadow: 0 0 2px #FEFFFB;
-    background: #bbc5c5;
+    color: #111111;
+    text-shadow: 0 0 2px #f3f3f3;
+    background: #cfd4d6;
     text-decoration: none;
   }
   /* footer */
@@ -341,8 +348,8 @@ footer p {
 /* font-awesome customize */
 #navToggler {
   size: 1.2em;
-  background: #232D33;
-  color: #FEFFFB;
+  background: #111111;
+  color: #f3f3f3;
   padding: 1em 1.5em;
   cursor: pointer;
   margin: auto 1em;
