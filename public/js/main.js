@@ -32,3 +32,23 @@ function toggle_dropNav(){
 		}, 500);
 	}
 }
+
+/* QR code */
+var qrLink = document.querySelector('.qrLink');
+qrLink.addEventListener('click', make_qr, false);
+
+function make_qr(){
+	console.log('an attempt');
+	var qrBox = document.createElement('div');
+	var qrCode = document.createElement('div');
+	qrBox.setAttribute('class', 'qrBox');
+	qrCode.innerHTML = "<img src='assets/images/brian_koscielniak-qr.png'>";
+
+	qrBox.appendChild(qrCode);
+	document.body.appendChild(qrBox);
+
+	qrBox.addEventListener('click', function(){
+		document.body.removeChild(document.querySelector('.qrBox'))
+	}, false);
+}
+
