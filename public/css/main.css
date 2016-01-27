@@ -8,6 +8,7 @@
 	- content
 	- navigation
 	- footer
+	- details
 - Small screen specific
 	- content
 	- navigation
@@ -21,7 +22,6 @@
 	- navigation
 	- footer
 - font-awesome customize
-- details
 ==================================== */
 /* LESS variables, mixins, etc */
 /* import theme (colors, fonts, etc) */
@@ -105,7 +105,9 @@ figure img {
   text-decoration: none;
 }
 #mainNav ul li a:hover {
-  text-decoration: underline;
+  font-weight: bold;
+  animation-name: slowline;
+  animation-duration: .5s;
 }
 /* dropNav */
 #dropNav {
@@ -121,17 +123,27 @@ figure img {
 #dropNav a {
   cursor: pointer;
   color: rgba(243, 243, 243, 0.8);
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+#dropNav a:hover,
+#dropNav a:focus {
+  font-weight: bold;
 }
 #dropNav div {
   margin: 0 1em;
   width: 20em;
 }
 #dropNav div img {
+  /* for the logo */
   text-align: center;
   width: 40%;
   margin: 0 30%;
 }
 #dropNav div ul:first-child {
+  flex: 2;
   font-weight: bold;
   font-size: 110%;
 }
@@ -147,7 +159,7 @@ figure img {
 }
 #dropNav div ul:first-child ul li {
   padding: .25em 0;
-  margin: 0 .25em;
+  margin: 0 .5em;
 }
 #dropNav div ul:first-child ul li:last-of-type {
   border: none;
@@ -156,8 +168,8 @@ figure img {
 .toggleBars {
   order: 1;
 }
-.navItem:nth-of-type(4),
-.navItem:nth-of-type(5) {
+#mainNav .navItem:nth-of-type(4),
+#mainNav .navItem:nth-of-type(5) {
   order: 2;
 }
 /* drop nav animations */
@@ -259,7 +271,18 @@ footer p {
 }
 /* details */
 .tagline span {
-  color: #b4bcbe;
+  color: #c2c8ca;
+}
+.qrBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(77, 77, 77, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* small screen specific */
 @media screen and (max-width: 30em) {
@@ -295,15 +318,15 @@ footer p {
     font-size: 1.25em;
     font-weight: bold;
     background: #99a3a6;
-    outline: #111111 solid 1px;
+    outline: #f3f3f3 solid 1px;
     line-height: 4em;
     /* sizes the nav */
     text-decoration: none;
   }
   #mainNav ul li a:hover {
     color: #111111;
-    text-shadow: 0 0 2px #f3f3f3;
-    background: #cfd4d6;
+    text-shadow: 1px 1px 1px #f3f3f3;
+    background: #7e8a8e;
     text-decoration: none;
   }
   /* footer */
@@ -327,7 +350,7 @@ footer p {
     align-items: center;
   }
   /* Sizing nav items for even centered */
-  .navItem {
+  #mainNav .navItem {
     width: 7em;
   }
 }
@@ -342,7 +365,7 @@ footer p {
     align-self: center;
   }
   /* Sizing nav items for even centered */
-  .navItem {
+  #mainNav .navItem {
     width: 8em;
   }
 }
@@ -359,16 +382,4 @@ footer p {
   #navToggler {
     display: none;
   }
-}
-/* Details */
-.qrBox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(77, 77, 77, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

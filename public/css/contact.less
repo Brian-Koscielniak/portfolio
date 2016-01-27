@@ -53,11 +53,12 @@ fieldset {
 
 /* Constant styles */
 	/* Contact info styling */
-	#businessCard {
+	#informationArea {
 		a {
 			display: block;
 			padding-left: 1em;
 			color: black;
+			text-decoration: none;	
 			&:hover {
 				font-weight: bold;
 			}
@@ -66,9 +67,9 @@ fieldset {
 			margin-bottom: .5em;
 			padding-bottom: .5em;
 			border-bottom: 1px solid hsla(0, 0%, 0%, .5);
-		}
-		#links {
-			border: none;
+			&:last-of-type {
+				border: none;
+			}
 		}
 	}
 
@@ -143,7 +144,7 @@ fieldset {
 	}
 
 	/* contact info styling */
-	#businessCard {
+	#informationArea {
 		.box-n-border(100%, 5px, darken(@bmkWhite, 5%));
 		margin-bottom: 1em;
 	}
@@ -206,7 +207,7 @@ fieldset {
 	}
 
 	/* contact info styling */
-	#businessCard {
+	#informationArea {
 		.box-n-border(100%, 5px, darken(@bmkWhite, 5%));
 		margin-bottom: 1em;
 		min-width: 450px;
@@ -266,7 +267,7 @@ fieldset {
 	}
 
 	/* contact info styling */
-	#businessCard {
+	#informationArea {
 		.box-n-border(30%, 5px, darken(@bmkWhite, 5%));
 		margin-left: 1em;
 	}

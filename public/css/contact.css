@@ -35,20 +35,21 @@ fieldset {
 }
 /* Constant styles */
 /* Contact info styling */
-#businessCard a {
+#informationArea a {
   display: block;
   padding-left: 1em;
   color: black;
+  text-decoration: none;
 }
-#businessCard a:hover {
+#informationArea a:hover {
   font-weight: bold;
 }
-#businessCard div {
+#informationArea div {
   margin-bottom: .5em;
   padding-bottom: .5em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
-#businessCard #links {
+#informationArea div:last-of-type {
   border: none;
 }
 /* details */
@@ -161,7 +162,7 @@ fieldset {
     cursor: pointer;
   }
   /* contact info styling */
-  #businessCard {
+  #informationArea {
     background: #e6e6e6;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
@@ -276,7 +277,7 @@ fieldset {
     cursor: pointer;
   }
   /* contact info styling */
-  #businessCard {
+  #informationArea {
     background: #e6e6e6;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
@@ -389,7 +390,7 @@ fieldset {
     cursor: pointer;
   }
   /* contact info styling */
-  #businessCard {
+  #informationArea {
     background: #e6e6e6;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);

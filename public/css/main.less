@@ -8,6 +8,7 @@
 	- content
 	- navigation
 	- footer
+	- details
 - Small screen specific
 	- content
 	- navigation
@@ -21,7 +22,6 @@
 	- navigation
 	- footer
 - font-awesome customize
-- details
 ==================================== */
 
 
@@ -107,7 +107,9 @@
 					line-height: 3em; /* sizes the nav */
 					text-decoration: none;	
 					&:hover {
-						text-decoration: underline;	
+						font-weight: bold;
+						animation-name: slowline;
+						animation-duration: .5s;
 					}
 				}
 			}
@@ -129,16 +131,24 @@
 		a {
 			cursor: pointer;
 			color: fade(@bmkWhite, 80%);
+			text-decoration: none;
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			&:hover, &:focus {
+				font-weight: bold;
+			}
 		}
 		div {
 			margin: 0 1em;
 			width: 20em;
-			img {
+			img { /* for the logo */
 				text-align: center;
 				width: 40%;
 				margin: 0 30%;
 			}
 			ul:first-child {
+				flex: 2;
 				font-weight: bold;
 				font-size: 110%;
 				li {
@@ -152,10 +162,10 @@
 					color: fade(@bmkWhite, 80%);
 					li {
 						padding: .25em 0;
-						margin: 0 .25em;
-					}
-					li:last-of-type {
-						border: none;
+						margin: 0 .5em;
+						&:last-of-type {
+							border: none;
+						}
 					}
 				}
 			}
@@ -166,8 +176,10 @@
 	.toggleBars {
 		order: 1;
 	}
-	.navItem:nth-of-type(4), .navItem:nth-of-type(5) {
-		order: 2;
+	#mainNav {
+		.navItem:nth-of-type(4), .navItem:nth-of-type(5) {
+			order: 2;
+		}
 	}
 	
 
@@ -254,8 +266,19 @@
 	/* details */
 	.tagline {
 		span {
-			color: lighten(@bmkGrey, 10%);
+			color: lighten(@bmkGrey, 15%);
 		}
+	}
+	.qrBox {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: hsla(0, 0%, 30%, .5);
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 /* small screen specific */
@@ -290,13 +313,13 @@
 					font-size: 1.25em;
 					font-weight: bold;
 					background: @bmkGrey;
-					outline: @bmkBlack solid 1px;
+					outline: @bmkWhite solid 1px;
 					line-height: 4em; /* sizes the nav */
 					text-decoration: none;	
 					&:hover {
 						color: @bmkBlack;
-						text-shadow: 0 0 2px @bmkWhite;
-						background: lighten(@bmkGrey, 20%);
+						text-shadow: 1px 1px 1px @bmkWhite;
+						background: darken(@bmkGrey, 10%);
 						text-decoration: none;	
 					}
 				}
@@ -328,8 +351,10 @@
 	}
 
 	/* Sizing nav items for even centered */
-	.navItem {
-		width: 7em;
+	#mainNav {
+		.navItem {
+			width: 7em;
+		}
 	}
 }
 
@@ -348,8 +373,10 @@
 	}
 	
 	/* Sizing nav items for even centered */
-	.navItem {
-		width: 8em;
+	#mainNav {
+		.navItem {
+			width: 8em;
+		}
 	}
 }
 
@@ -366,17 +393,4 @@
 	#navToggler {
 		display: none;
 	}
-}
-
-/* Details */
-.qrBox {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: hsla(0, 0%, 30%, .5);
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }

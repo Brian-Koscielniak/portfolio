@@ -19,8 +19,9 @@ main {
 }
 /* Content */
 h1 {
+  font-size: 200%;
   text-align: center;
-  margin: 2em;
+  margin: 0 2em 2em;
 }
 /* Setting Project boxes */
 #projectArea {
@@ -135,6 +136,7 @@ h1 {
     width: 300px;
   }
   .project a {
+    background: rgba(0, 0, 0, 0.6);
     height: 300px;
     width: 300px;
     opacity: 1;

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by Brian Koscielniak -->
+<svg
+	xmlns:svg="http://www.w3.org/2000/svg"
+	xmlns="http://www.w3.org/2000/svg"
+	width="210"
+	height="210"
+	id="svg2"
+	version="1.1">
+	<g transform="translate(5,5)">
+		<path
+			style="fill:none;stroke:#111111;stroke-width:10;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+			d="m 50,100 50,-50 0,50 50,0 -50,50"
+			id="mStroke"/>
+		<path
+			style="fill:none;stroke:#111111;stroke-width:10;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+			d="M 50,50 150, 150"
+			id="tallStroke"/>
+	</g>
+</svg>

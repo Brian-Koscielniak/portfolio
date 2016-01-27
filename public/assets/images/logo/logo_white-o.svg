@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by Brian Koscielniak -->
+<svg
+	xmlns:svg="http://www.w3.org/2000/svg"
+	xmlns="http://www.w3.org/2000/svg"
+	version="1.1"
+	width="210"
+	height="210"
+	id="monogram">
+	<g transform="translate(5,5)">
+		<path
+			style="fill:none;fill-opacity:1;stroke:#f3f3f3;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+			d="M 0,100 50,150 100,200 150,150 200,100 150,50 100,0 50,50 0,100 Z"
+			id="bigSquare" />
+		<path
+			style="fill:none;stroke:#f3f3f3;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+			d="m 50,150 100,0 0,-100 -100,0 z"
+			id="smallSquare"/>
+		<path
+			style="fill:none;stroke:#f3f3f3;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+			d="M 0,100 200,100"
+			id="horizontalLine"/>
+		<path
+			style="fill:none;stroke:#f3f3f3;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+			d="M 100 200,100 0"
+			id="verticalLine"/>
+	</g>
+	<g transform="translate(5,5)">
+		<path
+			style="fill:none;stroke:#f3f3f3;stroke-width:10;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+			d="m 50,100 50,-50 0,50 50,0 -50,50"
+			id="mStroke"/>
+		<path
+			style="fill:none;stroke:#f3f3f3;stroke-width:10;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+			d="M 50,50 150, 150"
+			id="tallStroke"/>
+		<path
+			style="fill:none;stroke:#f3f3f3;stroke-width:10;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+			d="M 25,125 0,100 25,75"
+			id="leftBracket"/>
+		<path
+			style="fill:none;stroke:#f3f3f3;stroke-width:10;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+			d="M 175,125 200,100 175,75"
+			id="rightBracket"/>
+	</g>
+</svg>

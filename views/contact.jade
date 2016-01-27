@@ -24,22 +24,16 @@ block content
 					textarea.userInfo(name='message' placeholder="Let's work together!" required)
 				li
 					input(type='submit' name='submit' value='send')
-	section#businessCard
-		// GIVE OUT NO PHONE NUMBER. upon request only.
+	section#informationArea
 		div#contactInfo
-			h1 Contact Information	
-			a(target='_self' href='mailto:0000000000000000@gamil.com') email me
+			h1 Information	
+			a(title='email Brian Koscielniak' target='_self' href='mailto:bkoscielniak31@gamil.com') Email me
+			a Resume
+			a(class='qrLink') QR 
+				span(class='fa fa-qrcode') 
 		div#networks
-			h2 Networks
-			a(href='https://github.com/Brian-Koscielniak') GitHub
-			a Linkedin
-			a Indeed
-		div#links
-			h2 Further Info
-			a(href='resume') Resume
-			// assets/Brian_Koscielniak-Web_Developer-Resume
-			a(href='businessCard') Card
-			// NO PHONE NUMBER 
-			// assets/Brian_Koscielniak-Web_Developer-Card
+			h1 Networks
+			a(title='Brian Koscielniak at GitHub' href='https://github.com/Brian-Koscielniak') GitHub
+			a(title='Brian Koscielniak at Linkedin' href='http://www.linkedin.com/in/bkoscielniak') Linkedin
 block uniqueScripts
 	script(type='text/javascript' src='js/contact.js')

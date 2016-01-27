@@ -14,39 +14,44 @@ html(lang='en-us')
 	body
 		block nav
 			mav#dropNav.navReady
-				div.logo
+				div#dropLogo.logo
 					a(href='/')
 						img(src='assets/images/logo/logo_white-o.svg')
 				div
 					ul
-						li About
-						li Showcase
+						li.navItem
+							a(href='about') About
+						li.navItem
+							a(href='showcase') Showcase
 						ul
-							li Realtor Application
-							li CMS Application
-							li Flexbox Tool
-							li Personal Branding
-							li Multiplayer Cards
+							li.navItem
+								a(href="showcase/realtor") Realtor Application
+							li.navItem
+								a(href="showcase/cms") CMS Application
+							li.navItem
+								a(href="showcase/flexbox") Flexbox Generator
+							li.navItem
+								a(href="showcase/cards") Card Games
+							li.navItem
+								a(href="showcase/brand") Personal Brand
 				div
 					ul 
-						li Contact
+						li.navItem
+							a(href='contact') Contact 
 						ul
-							li Email
-							li GitHub
-							li Linkedin
-							li 
+							li.navItem
+								a(title='Brian Koscielniak at GitHub' href='https://github.com/Brian-Koscielniak') GitHub
+							li.navItem
+								a(title='Brian Koscielniak at Linkedin' href='http://www.linkedin.com/in/bkoscielniak') Linkedin
+							li.navItem
+								a(title='email Brian Koscielniak' target='_self' href='mailto:bkoscielniak31@gamil.com') Email
+							li.navItem
 								a Resume
-							li 
-								span(class='fa fa-qrcode') 
-									a(class='qrLink') QR Card
-				div
-					ul
-						li Blog
-						li Cool Things
-						ul
-							li one
-							li two
-							li three
+							li.navItem
+								a(class='qrLink') QR 
+									span(class='fa fa-qrcode') 
+						li.navItem
+							a(href='blog') Blog
 			nav#mainNav
 				ul
 					li.toggleBars
@@ -73,12 +78,11 @@ html(lang='en-us')
 				div.tagline
 					p 
 						span In a phrase tell them what you do: 
-						| I build custom applications, with usability, responsiveness, and performance in mind. 
+						| I design and code custom applications, from layout to function, giving special attention to usability. 
 				div.social
-					a(class='fa fa-envelope-o' title='email Brian Koscielniak' target='_self' href='mailto:0000000000000000@gamil.com')
 					a(class='fa fa-github-alt' title='Brian Koscielniak at GitHub' href='https://github.com/Brian-Koscielniak')
-					a(class='fa fa-linkedin-square' title='Brian Koscielniak at Linkedin' href='#')
-					a(class='fa fa-google-plus' title='Brian Koscielniak at Google+' href='#')
+					a(class='fa fa-linkedin-square' title='Brian Koscielniak at Linkedin' href='http://www.linkedin.com/in/bkoscielniak')
+					a(class='fa fa-envelope-o' title='email Brian Koscielniak' target='_self' href='mailto:bkoscielniak31@gamil.com')
 		block scripts
 			script(type='text/javascript' src='js/Ajax.js')
 			script(type='text/javascript' src='js/main.js')
