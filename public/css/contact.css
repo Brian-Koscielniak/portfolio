@@ -36,6 +36,7 @@ fieldset {
 /* Constant styles */
 /* Contact info styling */
 #informationArea a {
+  cursor: pointer;
   display: block;
   padding-left: 1em;
   color: black;
