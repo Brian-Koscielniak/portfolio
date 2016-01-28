@@ -23,6 +23,26 @@ exports.blog = function(req, res){
 exports.notFound = function(req, res){
 	res.render('layout.jade');
 }
+exports.project = function(req, res, page){
+/* Renders and feeds matching content in via 'page' variable */
+	// TODO: these obj will need to be moved to a database
+	var projectObj = {
+		'realtor' : {
+			title : 'Realtor Application', 
+			desc : 'this is a great application',
+			video : 'assets/videos/realtorApp_demonstration.webm',
+			demo : '/realtor/demo'
+		},
+		'cms' : {
+			title : 'Content Management System', 
+			desc : 'this is a great application',
+			video : 'assets/videos/cms_demonstration.webm',
+			demo : null 
+		}
+	}
+	
+	res.render('project-template.jade', projectObj[page]); // bracket notation works for varible properties, nice.
+}
 
 /* POSTs */
 exports.contactPost = function(req, res){

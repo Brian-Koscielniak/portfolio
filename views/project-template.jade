@@ -1,0 +1,17 @@
+extends ./layout.jade
+
+block content
+	if title
+		h1 !{title}
+	if desc
+		p !{desc}
+	if video
+		video(width="100%", controls)
+			source(src= video)
+			Your browser does not support the video tag
+	if demo
+		br
+		br
+		p There is a  
+			a(href= demo) live demo of the application
+			|  available, if you would like to test it out.
