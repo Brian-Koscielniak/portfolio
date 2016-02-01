@@ -2,10 +2,9 @@ var controller = require('../controllers/main-controller.js');
 
 module.exports = function(app){
 	/* GETs */
-	app.get('/', function(req, res){controller.home(req, res)});
-	app.get('/home', function(req, res){controller.home(req, res)});
-	app.get('/about', function(req, res){controller.about(req, res)});
-	app.get('/showcase', function(req, res){controller.showcase(req, res)});
+	app.get(['/','/home','/index'], function(req, res){controller.home(req, res)});
+	app.get(['/about','info'], function(req, res){controller.about(req, res)});
+	app.get(['/showcase','/projects'], function(req, res){controller.showcase(req, res)});
 			// Projects in the showcase
 			app.get('/realtor', function(req, res){controller.project(req, res, 'realtor')});
 			app.get('/cms', function(req, res){controller.project(req, res, 'cms')});
@@ -14,7 +13,8 @@ module.exports = function(app){
 		/* Temp GETs */// Temp GETs will be removed once a superior solution for live demos is found.
 			app.get('/realtor/demo', function(req, res){ res.render('../projects/realtorApp/views/realtorApp.jade') });
 		/* Temp GETs */
-	app.get('*', function(req, res){controller.notFound(req, res)});
+	app.get('/404', function(req, res){controller.notFound(req, res)});
+	app.get('*', function(req, res){res.redirect('/404');});
 
 	/* POSTs */
 	app.post('/contact', function(req, res){controller.contactPost(req, res)});

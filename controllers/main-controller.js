@@ -21,7 +21,7 @@ exports.blog = function(req, res){
 	res.redirect('https://koscielniak.wordpress.com/');
 }
 exports.notFound = function(req, res){
-	res.render('layout.jade');
+	res.render('404.jade');
 }
 exports.project = function(req, res, page){
 /* Renders and feeds matching content in via 'page' variable */
