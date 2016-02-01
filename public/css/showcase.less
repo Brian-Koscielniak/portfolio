@@ -12,13 +12,14 @@
 
 /* LESS variables, mixins, etc */
 	/* variables */
-	@root: "http://lorempixel.com/g/";
+/*	@root: "http://lorempixel.com/g/";		*/
+	@root: "../assets/images/projects/";
 	@bigBox: 400;
 	@smallBox: 300;
 
 	/* mixins */
-	.project-background(@size: '@{smallBox}/', @file: abstract){
-		@url: "@{root}@{size}@{size}@{file}";
+	.project-background(@file){
+		@url: "@{root}@{file}";
 		background: url(@url);
 		background-position: center center;
 	}
@@ -107,19 +108,16 @@ h1 {
 
 /* backgrounds */
 .realtorApp {
-	.project-background('@{bigBox}/', 'abstract');
+	.project-background('realtor-l.gif');
 }
 .cmsApp {
-	.project-background('@{bigBox}/', 'business');
+	.project-background('cms-l.gif');
 }
 .cardApp {
-	.project-background('@{bigBox}/', 'nature');
 }
 .branding {
-	.project-background('@{bigBox}/', 'fashion');
 }
 .flexProject {
-	.project-background('@{bigBox}/', 'city');
 }
 
 /* size specific */
@@ -137,19 +135,16 @@ h1 {
 
 	/* backgrounds */
 	.realtorApp {
-		.project-background('@{smallBox}/', 'abstract');
+		.project-background('realtor-s.gif');
 	}
 	.cmsApp {
-		.project-background('@{smallBox}/', 'business');
+		.project-background('cms-s.gif');
 	}
 	.cardApp {
-		.project-background('@{smallBox}/', 'nature');
 	}
 	.branding {
-		.project-background('@{smallBox}/', 'fashion');
 	}
 	.flexProject {
-		.project-background('@{smallBox}/', 'city');
 	}
 }
 	

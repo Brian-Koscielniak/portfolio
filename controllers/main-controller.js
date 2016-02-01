@@ -29,15 +29,14 @@ exports.project = function(req, res, page){
 	var projectObj = {
 		'realtor' : {
 			title : 'Realtor Application', 
-			desc : 'this is a great application',
+			desc : 'In this project the goal was to create a real-estate look up tool in a RESTful architectural style. This application uses the HTTP method POST to communicate with the Zillow property database, and uses Ajax to update the page without a refresh. </br>The features include: property look up, property comparisons, saving property info to local web storage, HTML5 forms with error handling, Google maps, and a compound interest calculator.',
 			video : 'assets/videos/realtorApp_demonstration.webm',
 			demo : '/realtor/demo'
 		},
 		'cms' : {
 			title : 'Content Management System', 
-			desc : 'this is a great application',
+			desc : 'Just as the name implies, this application is a demonstration of a website with editable content.  This CMS uses <a href="http://www.tinymce.com">TinyMCE</a> to edit and send updated page content. All content is retrieved from and written to a Mongo database. <br>The features include: admin login, sessions, and editable content.',
 			video : 'assets/videos/cms_demonstration.webm',
-			demo : null 
 		}
 	}
 	
