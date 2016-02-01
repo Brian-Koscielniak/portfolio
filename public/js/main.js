@@ -43,7 +43,7 @@ function make_qr(){
 	var qrBox = document.createElement('div');
 	var qrCode = document.createElement('div');
 	qrBox.setAttribute('class', 'qrBox');
-	qrCode.innerHTML = "<img src='assets/images/brian_koscielniak-qr.png'>";
+	qrCode.innerHTML = "<img src='assets/images/profile/brian_koscielniak-qr.png'>";
 
 	qrBox.appendChild(qrCode);
 	document.body.appendChild(qrBox);
