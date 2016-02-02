@@ -1,0 +1,49 @@
+/* TABLE OF CONTENTS ==================
+- LESS
+	- theme
+- content
+- Small and medium screen specific
+- Large screen specific 
+==================================== */
+
+
+
+/* LESS variables, mixins, etc */
+	/* import theme (colors, fonts, etc) */
+	@import (less) "theme.less";
+
+/* content */
+#welcome {
+	font-size: 200%;
+}
+#intro {
+	display: flex;
+}
+#showCaseMini {
+	min-width: 300px;
+	min-height: 300px;
+	position: relative;
+	img {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+/* small and medium screen specific */
+@media screen and (max-width: 60em){
+	#intro {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+/* larger screen size specific */
+@media screen and (min-width: 60em){
+	#intro {
+		article {
+			margin-right: 2em;
+		}
+	}
+}

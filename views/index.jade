@@ -1,5 +1,18 @@
 extends ./layout.jade
 
+block uniqueStyles
+	link(rel='stylesheet' type='text/css' href='css/index.css')
+
 block content
-	main
-		p Hello and welcome
+	p#welcome Oh hello! Let me introduce myself, my name is Brian Koscielniak a Web Developer. And how are you doing today?
+
+	section#intro
+		article
+			p Thank you for visiting my professional portfolio. And as any good portfolio does, it contains all of my best work, as well as various ways to contact me. 
+			p My focus as a Web Developer leans more towards coding and the command line. My inspiration comes from seeing the web in action, the communities that form, the services and experiences that people build, and the broad and open ended possiblities that the web allows. 
+			p Please feel free to look around and examine my code.
+		div#showCaseMini
+			img(src='http://www.lorempixel.com/g/300/300/abstract' alt='screenshots of brian\'s work')
+
+block uniqueScripts
+	script(type='text/javascript' src='js/index.js')
