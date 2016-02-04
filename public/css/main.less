@@ -33,7 +33,9 @@
 	/* mixins */
 	.colFlex {
 		display: flex;
+		display: -webkit-flex;
 		flex-direction: column;
+		-webkit-flex-direction: column;
 	}
 
 /* Adjusting Defaults */
@@ -92,18 +94,24 @@
 		width: 100%;
 		ul {
 			display: flex;
+			display: -webkit-flex;
 			flex-direction: row;
+			-webkit-flex-direction: row;
 			justify-content: center;
+			-webkit-justify-content: center;
 
 			list-style-type: none;
 			li {
 				display: flex;
+				display: -webkit-flex;
 				align-items: center;
+				-webkit-align-items: center;
 
 				text-align: center;
 				a {
 					padding: 0 1em;
 					flex: 1;
+					-webkit-flex: 1;
 					line-height: 3em; /* sizes the nav */
 					text-decoration: none;	
 					&:hover {
@@ -124,9 +132,13 @@
 		color: @bmkWhite;
 
 		display: flex;
+		-webkit-display: flex;
 		justify-content: center;
+		-webkit-justify-content: center;
 		align-items: flex-top;
+		-webkit-align-items: flex-top;
 		flex-flow: row wrap;
+		-webkit-flex-flow: row wrap;
 
 		a {
 			cursor: pointer;
@@ -149,6 +161,8 @@
 			}
 			ul:first-child {
 				flex: 2;
+				-webkit-flex: 2;
+				-ms-flex: 2;
 				font-weight: bold;
 				font-size: 110%;
 				li {
@@ -175,10 +189,12 @@
 	/* Properly position nav items */
 	.toggleBars {
 		order: 1;
+		-webkit-order: 1;
 	}
 	#mainNav {
 		.navItem:nth-of-type(4), .navItem:nth-of-type(5) {
 			order: 2;
+			-webkit-order: 2;
 		}
 	}
 	
@@ -234,8 +250,11 @@
 	footer {
 		.colFlex;
 		justify-content: center;
+		-webkit-justify-content: center;
 		text-align: center;
+		-webkit-text-align: center;
 		align-items: center;
+		-webkit-align-items: center;
 		height: 400px;
 		width: 100%;
 		background: @bmkBlue;
@@ -277,8 +296,11 @@
 		height: 100%;
 		background: hsla(0, 0%, 30%, .5);
 		display: flex;
+		display: -webkit-flex;
 		align-items: center;
+		-webkit-align-items: center;
 		justify-content: center;
+		-webkit-justify-content: center;
 	}
 
 /* small screen specific */
@@ -299,16 +321,21 @@
 	/* main navigation */
 	#mainNav {
 		order: 1;
+		-webkit-order: 1;
 		ul {
 			.colFlex;
 			margin-bottom: 1px;
 			list-style-type: none;
 			li {
 				flex: 1;
+				-webkit-flex: 1;
+				-ms-flex: 1;
 				display: flex;
+				display: -webkit-flex;
 				text-align: center;
 				a {
 					flex: 1;
+					-webkit-flex: 1;
 					color: @bmkWhite;
 					font-size: 1.25em;
 					font-weight: bold;
@@ -330,6 +357,7 @@
 	/* footer */
 	footer {
 		order: 1;
+		-webkit-order: 1;
 		min-height: 500px;
 	}
 }
@@ -347,7 +375,9 @@
 	}
 	#dropNav {
 		flex-direction: column;
+		-webkit-flex-direction: column;
 		align-items: center;
+		-webkit-align-items: center;
 	}
 
 	/* Sizing nav items for even centered */

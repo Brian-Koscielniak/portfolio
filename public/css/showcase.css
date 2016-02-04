@@ -26,9 +26,13 @@ h1 {
 /* Setting Project boxes */
 #projectArea {
   display: flex;
+  display: -webkit-flex;
   flex-flow: wrap;
+  -webkit-flex-flow: wrap;
   align-items: center;
+  -webkit-align-items: center;
   justify-content: center;
+  -webkit-justify-content: center;
 }
 .project {
   height: 400px;
@@ -54,9 +58,13 @@ h1 {
 }
 .project a {
   display: flex;
+  display: -webkit-flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
   align-items: center;
+  -webkit-align-items: center;
   justify-content: center;
+  -webkit-justify-content: center;
   opacity: 0;
   text-decoration: none;
   color: white;

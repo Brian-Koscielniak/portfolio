@@ -33,7 +33,9 @@
 /* mixins */
 .colFlex {
   display: flex;
+  display: -webkit-flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
 }
 /* Adjusting Defaults */
 /* removing defualts */
@@ -65,7 +67,9 @@ p {
 /* content */
 body {
   display: flex;
+  display: -webkit-flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
   background: #f3f3f3;
   min-height: 500px;
   margin-bottom: 400px;
@@ -88,18 +92,24 @@ figure img {
 }
 #mainNav ul {
   display: flex;
+  display: -webkit-flex;
   flex-direction: row;
+  -webkit-flex-direction: row;
   justify-content: center;
+  -webkit-justify-content: center;
   list-style-type: none;
 }
 #mainNav ul li {
   display: flex;
+  display: -webkit-flex;
   align-items: center;
+  -webkit-align-items: center;
   text-align: center;
 }
 #mainNav ul li a {
   padding: 0 1em;
   flex: 1;
+  -webkit-flex: 1;
   line-height: 3em;
   /* sizes the nav */
   text-decoration: none;
@@ -116,9 +126,13 @@ figure img {
   background: #111111;
   color: #f3f3f3;
   display: flex;
+  -webkit-display: flex;
   justify-content: center;
+  -webkit-justify-content: center;
   align-items: flex-top;
+  -webkit-align-items: flex-top;
   flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
 }
 #dropNav a {
   cursor: pointer;
@@ -144,6 +158,8 @@ figure img {
 }
 #dropNav div ul:first-child {
   flex: 2;
+  -webkit-flex: 2;
+  -ms-flex: 2;
   font-weight: bold;
   font-size: 110%;
 }
@@ -167,10 +183,12 @@ figure img {
 /* Properly position nav items */
 .toggleBars {
   order: 1;
+  -webkit-order: 1;
 }
 #mainNav .navItem:nth-of-type(4),
 #mainNav .navItem:nth-of-type(5) {
   order: 2;
+  -webkit-order: 2;
 }
 /* drop nav animations */
 .open {
@@ -238,10 +256,15 @@ figure img {
 /* footer */
 footer {
   display: flex;
+  display: -webkit-flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
   justify-content: center;
+  -webkit-justify-content: center;
   text-align: center;
+  -webkit-text-align: center;
   align-items: center;
+  -webkit-align-items: center;
   height: 400px;
   width: 100%;
   background: #3588af;
@@ -281,8 +304,11 @@ footer p {
   height: 100%;
   background: rgba(77, 77, 77, 0.5);
   display: flex;
+  display: -webkit-flex;
   align-items: center;
+  -webkit-align-items: center;
   justify-content: center;
+  -webkit-justify-content: center;
 }
 /* small screen specific */
 @media screen and (max-width: 30em) {
@@ -300,20 +326,27 @@ footer p {
   /* main navigation */
   #mainNav {
     order: 1;
+    -webkit-order: 1;
   }
   #mainNav ul {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
     margin-bottom: 1px;
     list-style-type: none;
   }
   #mainNav ul li {
     flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     display: flex;
+    display: -webkit-flex;
     text-align: center;
   }
   #mainNav ul li a {
     flex: 1;
+    -webkit-flex: 1;
     color: #f3f3f3;
     font-size: 1.25em;
     font-weight: bold;
@@ -332,6 +365,7 @@ footer p {
   /* footer */
   footer {
     order: 1;
+    -webkit-order: 1;
     min-height: 500px;
   }
 }
@@ -347,7 +381,9 @@ footer p {
   }
   #dropNav {
     flex-direction: column;
+    -webkit-flex-direction: column;
     align-items: center;
+    -webkit-align-items: center;
   }
   /* Sizing nav items for even centered */
   #mainNav .navItem {
